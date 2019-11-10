@@ -18,7 +18,7 @@ namespace Flamingo
             timer.Interval = 10;
             timer.Start();
 
-            Focus();
+            this.Activate();
             StartPosition = FormStartPosition.CenterScreen;
             BackgroundImage = ProjectResources.AuthorizationBackground;
             CollapseButton.BackgroundImage = ProjectResources.UnfocussedCollapseButton;
@@ -36,6 +36,18 @@ namespace Flamingo
             this.KeyDown += AuthorizationForm_KeyDown;
             LoginTextBox.KeyDown += AuthorizationForm_KeyDown;
             PasswordTextBox.KeyDown += AuthorizationForm_KeyDown;
+            PasswordTextBox.LostFocus += SetPassCharInTextBox;
+            PasswordTextBox.GotFocus += SetPassCharInTextBox;
+            ShowPasswordButton.MouseUp += SetPassCharInTextBox;
+            ShowPasswordButton.MouseDown += ShowPasswordButtonMouseDown;
+        }
+
+        private void SetPassCharInTextBox(object sender, EventArgs e)
+        {
+            if (!PasswordTextBox.PlaceHolderText.Equals(PasswordTextBox.Text))
+                PasswordTextBox.PasswordChar = '•';
+            else
+                PasswordTextBox.PasswordChar = '\0';
         }
 
         private void AuthorizationForm_KeyDown(object sender, KeyEventArgs e)
@@ -127,14 +139,9 @@ namespace Flamingo
             Close();
         }
 
-        private void ShowPasswordButton_MouseDown(object sender, MouseEventArgs e)
+        private void ShowPasswordButtonMouseDown(object sender, MouseEventArgs e)
         {
             PasswordTextBox.PasswordChar = '\0';
-        }
-
-        private void ShowPasswordButton_MouseUp(object sender, MouseEventArgs e)
-        {
-            PasswordTextBox.PasswordChar = '•';
         }
     }
 }

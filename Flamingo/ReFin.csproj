@@ -193,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\PredictAPI.cs" />
+    <Compile Include="Classes\PHTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="JSON Adjustment\EventsResultDeserializer.cs" />
     <Compile Include="JSON Adjustment\EventsRootObject.cs" />
     <Compile Include="JSON Adjustment\SearchResultDeserializer.cs" />

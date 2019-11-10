@@ -19,7 +19,7 @@ namespace Flamingo
             timer.Interval = 10;
             timer.Start();
 
-            Focus();
+            this.Activate();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackgroundImage = ProjectResources.RegistrationBackground;
             CollapseButton.BackgroundImage = ProjectResources.UnfocussedCollapseButton;
@@ -142,6 +142,11 @@ namespace Flamingo
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
         {
             Close();
         }

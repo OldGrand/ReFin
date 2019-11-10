@@ -1,4 +1,6 @@
-﻿namespace Flamingo
+﻿using Flamingo.Classes;
+
+namespace Flamingo
 {
     partial class AuthorizationForm
     {
@@ -30,13 +32,13 @@
         {
             this.RegistrationButton = new System.Windows.Forms.Button();
             this.ErrorLabel = new System.Windows.Forms.Label();
-            this.LoginTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.CollapseButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.AuthorizationButton = new System.Windows.Forms.PictureBox();
             this.ShowPasswordButton = new System.Windows.Forms.PictureBox();
             this.ErrorTextLabel = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new Flamingo.Classes.PHTextBox();
+            this.LoginTextBox = new Flamingo.Classes.PHTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CollapseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorizationButton)).BeginInit();
@@ -68,27 +70,6 @@
             this.ErrorLabel.TabIndex = 18;
             this.ErrorLabel.Text = "*";
             this.ErrorLabel.Visible = false;
-            // 
-            // LoginTextBox
-            // 
-            this.LoginTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LoginTextBox.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginTextBox.Location = new System.Drawing.Point(107, 218);
-            this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(185, 28);
-            this.LoginTextBox.TabIndex = 19;
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(107, 270);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '•';
-            this.PasswordTextBox.Size = new System.Drawing.Size(155, 28);
-            this.PasswordTextBox.TabIndex = 20;
             // 
             // CollapseButton
             // 
@@ -131,8 +112,6 @@
             this.ShowPasswordButton.Size = new System.Drawing.Size(31, 28);
             this.ShowPasswordButton.TabIndex = 22;
             this.ShowPasswordButton.TabStop = false;
-            this.ShowPasswordButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordButton_MouseDown);
-            this.ShowPasswordButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ShowPasswordButton_MouseUp);
             // 
             // ErrorTextLabel
             // 
@@ -146,17 +125,43 @@
             this.ErrorTextLabel.Text = "Неверный логин или пароль";
             this.ErrorTextLabel.Visible = false;
             // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Rockwell", 14F);
+            this.PasswordTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.PasswordTextBox.Location = new System.Drawing.Point(107, 271);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PlaceHolderText = "password";
+            this.PasswordTextBox.Size = new System.Drawing.Size(155, 28);
+            this.PasswordTextBox.TabIndex = 25;
+            this.PasswordTextBox.Text = "password";
+            // 
+            // LoginTextBox
+            // 
+            this.LoginTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.LoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginTextBox.Font = new System.Drawing.Font("Rockwell", 14F);
+            this.LoginTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.LoginTextBox.Location = new System.Drawing.Point(107, 218);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.PlaceHolderText = "e-mail";
+            this.LoginTextBox.Size = new System.Drawing.Size(185, 28);
+            this.LoginTextBox.TabIndex = 24;
+            this.LoginTextBox.Text = "e-mail";
+            // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(770, 460);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.ErrorTextLabel);
             this.Controls.Add(this.ShowPasswordButton);
             this.Controls.Add(this.CollapseButton);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AuthorizationButton);
@@ -179,11 +184,11 @@
         private System.Windows.Forms.PictureBox AuthorizationButton;
         private System.Windows.Forms.PictureBox CloseButton;
         private System.Windows.Forms.Label ErrorLabel;
-        private System.Windows.Forms.TextBox LoginTextBox;
-        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.PictureBox CollapseButton;
         private System.Windows.Forms.PictureBox ShowPasswordButton;
         private System.Windows.Forms.Label ErrorTextLabel;
+        private PHTextBox LoginTextBox;
+        private PHTextBox PasswordTextBox;
     }
 }
 
