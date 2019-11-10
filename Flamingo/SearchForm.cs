@@ -7,17 +7,21 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using System.Runtime.InteropServices;
 
 namespace Flamingo
 {
     public partial class SearchForm : Form
     {
+        [DllImport("user32")]
+        private static extern bool HideCaret(IntPtr hWnd);
         private const int cGrip = 16;     
         private const int cCaption = 32;
         private Thread inthernetChecker;
         private Preloader preloader;
         private RootObject rootObject;
         private EventsRootObject eventsRootObject;
+        private int CurrentScrollValue;
 
         public SearchForm()
         {
@@ -49,6 +53,7 @@ namespace Flamingo
             toolStrip1.MouseDown += ToolStrip1_MouseDown;
             SearchResultsList.MouseWheel += SearchResultsList_MouseWheel;
             SearchResultsList.KeyPress += SearchResultsList_KeyPress;
+            SearchResultsList.GotFocus += SearchResultsList_GotFocus;
 
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
@@ -60,20 +65,36 @@ namespace Flamingo
             Wrap.HorizontalScroll.Visible = false;
             Wrap.HorizontalScroll.Maximum = 0;
             Wrap.AutoScroll = true;
+            Wrap.Scroll += Wrap_Scroll;
 
             SideBar.Parent = this;
             SideBar.BringToFront();
             SideBar.Top = toolStrip1.Height + 15;
 
-            SearchResultsList.Top = 0;
             SearchResultsList.Font = new Font("Sylfaen", 10, FontStyle.Regular);
             SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
             SearchResultsList.BorderStyle = BorderStyle.None;
+            SearchResultsList.Top = 0;
 
             inthernetChecker = new Thread(InthernetChecker);    
             inthernetChecker.Start();
 
             preloader = new Preloader(ClientSize, this);
+        }
+
+        private void Wrap_Scroll(object sender, ScrollEventArgs e)
+        {
+            CurrentScrollValue = e.NewValue;
+        }
+
+        private void SearchResultsList_GotFocus(object sender, EventArgs e)
+        {
+            HideCaret();
+        }
+
+        public void HideCaret()
+        {
+            HideCaret(SearchResultsList.Handle);
         }
 
         private void SearchResultsList_KeyPress(object sender, KeyPressEventArgs e)
@@ -313,10 +334,8 @@ namespace Flamingo
         {
             Wrap.Width = ClientSize.Width;
             Wrap.Height = ClientSize.Height - toolStrip1.Height - cGrip;
-            SearchResultsList.Top = -Wrap.VerticalScroll.Value;
-            if (Width >= 700)
-                SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
-
+            SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
+            Wrap.VerticalScroll.Value = Wrap.VerticalScroll.Minimum;
             if (preloader != null)
             {
                 preloader.Width = Wrap.Width;

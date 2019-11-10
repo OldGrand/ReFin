@@ -173,6 +173,16 @@ namespace Flamingo {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SideBarBG {
+            get {
+                object obj = ResourceManager.GetObject("SideBarBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UnfocussedAuthorizationButton {
             get {
                 object obj = ResourceManager.GetObject("UnfocussedAuthorizationButton", resourceCulture);

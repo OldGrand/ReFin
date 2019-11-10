@@ -253,7 +253,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ProjectResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -339,6 +338,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Resources\NonActiveRegistration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SideBarBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

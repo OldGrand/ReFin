@@ -64,18 +64,20 @@
             // 
             // SideBar
             // 
-            this.SideBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SideBar.BackColor = System.Drawing.Color.Transparent;
+            this.SideBar.BackgroundImage = global::Flamingo.ProjectResources.SideBarBG;
+            this.SideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SideBar.Controls.Add(this.groupBox1);
             this.SideBar.Controls.Add(this.OrganizationsRadioButton);
             this.SideBar.Controls.Add(this.EventsRadioButton);
             this.SideBar.Location = new System.Drawing.Point(21, 20);
             this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(157, 224);
+            this.SideBar.Size = new System.Drawing.Size(175, 241);
             this.SideBar.TabIndex = 4;
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(14, 66);
+            this.groupBox1.Location = new System.Drawing.Point(14, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(129, 148);
             this.groupBox1.TabIndex = 2;
@@ -86,9 +88,10 @@
             // 
             this.OrganizationsRadioButton.AutoSize = true;
             this.OrganizationsRadioButton.Checked = true;
+            this.OrganizationsRadioButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OrganizationsRadioButton.Location = new System.Drawing.Point(14, 12);
             this.OrganizationsRadioButton.Name = "OrganizationsRadioButton";
-            this.OrganizationsRadioButton.Size = new System.Drawing.Size(101, 21);
+            this.OrganizationsRadioButton.Size = new System.Drawing.Size(143, 30);
             this.OrganizationsRadioButton.TabIndex = 1;
             this.OrganizationsRadioButton.TabStop = true;
             this.OrganizationsRadioButton.Text = "Заведения";
@@ -97,15 +100,17 @@
             // EventsRadioButton
             // 
             this.EventsRadioButton.AutoSize = true;
+            this.EventsRadioButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EventsRadioButton.Location = new System.Drawing.Point(14, 39);
             this.EventsRadioButton.Name = "EventsRadioButton";
-            this.EventsRadioButton.Size = new System.Drawing.Size(87, 21);
+            this.EventsRadioButton.Size = new System.Drawing.Size(122, 30);
             this.EventsRadioButton.TabIndex = 0;
             this.EventsRadioButton.Text = "События";
             this.EventsRadioButton.UseVisualStyleBackColor = true;
             // 
             // SearchResultsList
             // 
+            this.SearchResultsList.BackColor = System.Drawing.SystemColors.Window;
             this.SearchResultsList.Font = new System.Drawing.Font("SimSun", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchResultsList.Location = new System.Drawing.Point(315, 119);
             this.SearchResultsList.Multiline = true;
@@ -123,7 +128,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(100, 25, 1, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1245, 64);
+            this.toolStrip1.Size = new System.Drawing.Size(1100, 64);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -147,7 +152,7 @@
             this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SearchTextBox.Location = new System.Drawing.Point(229, 14);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(856, 33);
+            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
             this.SearchTextBox.TabIndex = 2;
             this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
             // 
@@ -171,7 +176,7 @@
             this.SearchPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SearchPictureBox.Location = new System.Drawing.Point(212, 5);
             this.SearchPictureBox.Name = "SearchPictureBox";
-            this.SearchPictureBox.Size = new System.Drawing.Size(912, 50);
+            this.SearchPictureBox.Size = new System.Drawing.Size(767, 50);
             this.SearchPictureBox.TabIndex = 26;
             this.SearchPictureBox.TabStop = false;
             // 
@@ -180,7 +185,7 @@
             this.ExpandButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ExpandButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
             this.ExpandButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ExpandButton.Location = new System.Drawing.Point(1166, 12);
+            this.ExpandButton.Location = new System.Drawing.Point(1021, 12);
             this.ExpandButton.Name = "ExpandButton";
             this.ExpandButton.Size = new System.Drawing.Size(35, 35);
             this.ExpandButton.TabIndex = 24;
@@ -192,7 +197,7 @@
             this.CollapseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CollapseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
             this.CollapseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CollapseButton.Location = new System.Drawing.Point(1125, 12);
+            this.CollapseButton.Location = new System.Drawing.Point(980, 12);
             this.CollapseButton.Name = "CollapseButton";
             this.CollapseButton.Size = new System.Drawing.Size(35, 35);
             this.CollapseButton.TabIndex = 23;
@@ -204,7 +209,7 @@
             this.CloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
             this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CloseButton.Location = new System.Drawing.Point(1207, 12);
+            this.CloseButton.Location = new System.Drawing.Point(1062, 12);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(35, 35);
             this.CloseButton.TabIndex = 22;
@@ -217,7 +222,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1245, 735);
+            this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.CityTextBox);
             this.Controls.Add(this.CityPictureBox);
@@ -229,7 +234,7 @@
             this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(640, 480);
+            this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "SearchForm";
             this.Text = "AdditionalInfoForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchForm_FormClosing);
