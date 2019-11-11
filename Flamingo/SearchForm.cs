@@ -276,10 +276,10 @@ namespace Flamingo
                 {
                     SearchResultsList.Text = GetStringEventResultAsync().Result;
 
-                    using (Graphics graphics = SearchResultsList.CreateGraphics())
+                    using (Graphics graphics = Graphics.FromHwnd(this.Handle))
                     {
-                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+20;
-                        SearchResultsList.Width = /*(int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width);*/400;
+                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+400;
+                        SearchResultsList.Width = 400;
                     }
                 });
             }
@@ -293,10 +293,10 @@ namespace Flamingo
                 {
                     SearchResultsList.Text = GetStringResultAsync().Result;
 
-                    using (Graphics graphics = SearchResultsList.CreateGraphics())
+                    using (Graphics graphics = Graphics.FromHwnd(this.Handle))
                     {
-                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height) + 530;
-                        SearchResultsList.Width = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width - 300);
+                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height);
+                        SearchResultsList.Width = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width);
                     }
                 });
             }
