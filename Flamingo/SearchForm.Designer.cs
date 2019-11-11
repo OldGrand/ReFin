@@ -35,13 +35,13 @@
             this.EventsRadioButton = new System.Windows.Forms.RadioButton();
             this.SearchResultsList = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.CityTextBox = new System.Windows.Forms.TextBox();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.CityPictureBox = new System.Windows.Forms.PictureBox();
             this.SearchPictureBox = new System.Windows.Forms.PictureBox();
             this.ExpandButton = new System.Windows.Forms.PictureBox();
             this.CollapseButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
+            this.SearchTextBox = new Flamingo.Classes.PHTextBox();
+            this.CityTextBox = new Flamingo.Classes.PHTextBox();
             this.Wrap.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CityPictureBox)).BeginInit();
@@ -132,30 +132,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // CityTextBox
-            // 
-            this.CityTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CityTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CityTextBox.Location = new System.Drawing.Point(17, 13);
-            this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(170, 33);
-            this.CityTextBox.TabIndex = 1;
-            this.CityTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CityTextBox_KeyDown);
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchTextBox.Location = new System.Drawing.Point(229, 14);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
-            this.SearchTextBox.TabIndex = 2;
-            this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
-            // 
             // CityPictureBox
             // 
             this.CityPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
@@ -216,6 +192,32 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
+            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
+            this.SearchTextBox.TabIndex = 28;
+            this.SearchTextBox.Text = "поисковой запрос";
+            // 
+            // CityTextBox
+            // 
+            this.CityTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CityTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.CityTextBox.Location = new System.Drawing.Point(16, 14);
+            this.CityTextBox.Name = "CityTextBox";
+            this.CityTextBox.PlaceHolderText = "город";
+            this.CityTextBox.Size = new System.Drawing.Size(170, 33);
+            this.CityTextBox.TabIndex = 29;
+            this.CityTextBox.Text = "город";
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,8 +225,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 600);
-            this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.CityTextBox);
+            this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.CityPictureBox);
             this.Controls.Add(this.SearchPictureBox);
             this.Controls.Add(this.Wrap);
@@ -262,12 +264,12 @@
         private System.Windows.Forms.Panel Wrap;
         private System.Windows.Forms.PictureBox SearchPictureBox;
         private System.Windows.Forms.PictureBox CityPictureBox;
-        private System.Windows.Forms.TextBox CityTextBox;
-        private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.TextBox SearchResultsList;
         private System.Windows.Forms.Panel SideBar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton OrganizationsRadioButton;
         private System.Windows.Forms.RadioButton EventsRadioButton;
+        private Classes.PHTextBox SearchTextBox;
+        private Classes.PHTextBox CityTextBox;
     }
 }

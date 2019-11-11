@@ -9,8 +9,11 @@ namespace Flamingo.Classes
 {
     class PHTextBox : System.Windows.Forms.TextBox
     {
-        System.Drawing.Color DefaultColor;
+        private const int WM_SETFOCUS = 0x07;
+        private const int WM_ENABLE = 0x0A;
+        private const int WM_SETCURSOR = 0x20;
         private string _placeHolder;
+
         public string PlaceHolderText
         {
             get
@@ -27,6 +30,7 @@ namespace Flamingo.Classes
                 }
             }
         }
+
         public PHTextBox() : base()
         {
             _placeHolder = "";
@@ -58,5 +62,11 @@ namespace Flamingo.Classes
             this.BackColor = Color.FromArgb(236, 229, 221);
             this.Font = new Font("Rockwell", 14, FontStyle.Regular);
         }
+
+        //protected override void WndProc(ref System.Windows.Forms.Message m)
+        //{
+        //    if (this.Enabled && !(m.Msg == WM_SETFOCUS || m.Msg == WM_ENABLE || m.Msg == WM_SETCURSOR))
+        //        base.WndProc(ref m);
+        //}
     }
 }
