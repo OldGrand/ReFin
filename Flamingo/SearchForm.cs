@@ -15,13 +15,14 @@ namespace Flamingo
     {
         [DllImport("user32")]
         private static extern bool HideCaret(IntPtr hWnd);
+        private bool isSearchActive;
         private const int cGrip = 16;     
         private const int cCaption = 32;
         private Thread inthernetChecker;
         private Preloader preloader;
         private RootObject rootObject;
         private EventsRootObject eventsRootObject;
-        private int CurrentScrollValue;
+        private PictureBox internetErrorPictureBox = new PictureBox();
 
         public SearchForm()
         {
@@ -34,29 +35,31 @@ namespace Flamingo
             });
             timer.Interval = 10;
             timer.Start();
-            Focus();
+            
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.MouseDown += SearchForm_MouseDown;
 
             rootObject = new RootObject();
             eventsRootObject = new EventsRootObject();
 
             CollapseButton.BackgroundImage = ProjectResources.UnfocussedCollapseButton;
-            CloseButton.BackgroundImage = ProjectResources.UnfocussedCloseButton;
-            ExpandButton.BackgroundImage = ProjectResources.UnfocussedButton;
-            CloseButton.MouseEnter +=  CloseButton_MouseEnter;
-            CloseButton.MouseLeave += CloseButton_MouseLeave;
             CollapseButton.MouseEnter += CollapseButton_MouseEnter;
             CollapseButton.MouseLeave += CollapseButton_MouseLeave;
+
+            CloseButton.BackgroundImage = ProjectResources.UnfocussedCloseButton;
+            CloseButton.MouseEnter +=  CloseButton_MouseEnter;
+            CloseButton.MouseLeave += CloseButton_MouseLeave;
+
+            ExpandButton.BackgroundImage = ProjectResources.UnfocussedButton;
             ExpandButton.MouseEnter += ExpandButton_MouseEnter;
             ExpandButton.MouseLeave += ExpandButton_MouseLeave;
-            this.MouseDown += SearchForm_MouseDown;
             toolStrip1.MouseDown += ToolStrip1_MouseDown;
-            SearchResultsList.MouseWheel += SearchResultsList_MouseWheel;
-            SearchResultsList.KeyPress += SearchResultsList_KeyPress;
-            SearchResultsList.GotFocus += SearchResultsList_GotFocus;
 
-            this.DoubleBuffered = true;
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            SearchTextBox.KeyDown += SearchTextBox_KeyDown;
+
+            CityTextBox.KeyDown += CityTextBox_KeyDown;
 
             Wrap.Left = 0;
             Wrap.Top = toolStrip1.Top + toolStrip1.Height;
@@ -65,12 +68,14 @@ namespace Flamingo
             Wrap.HorizontalScroll.Visible = false;
             Wrap.HorizontalScroll.Maximum = 0;
             Wrap.AutoScroll = true;
-            Wrap.Scroll += Wrap_Scroll;
 
             SideBar.Parent = this;
             SideBar.BringToFront();
             SideBar.Top = toolStrip1.Height + 15;
 
+            SearchResultsList.MouseWheel += SearchResultsList_MouseWheel;
+            SearchResultsList.KeyPress += SearchResultsList_KeyPress;
+            SearchResultsList.GotFocus += SearchResultsList_GotFocus;
             SearchResultsList.Font = new Font("Sylfaen", 10, FontStyle.Regular);
             SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
             SearchResultsList.BorderStyle = BorderStyle.None;
@@ -80,11 +85,15 @@ namespace Flamingo
             inthernetChecker.Start();
 
             preloader = new Preloader(ClientSize, this);
-        }
 
-        private void Wrap_Scroll(object sender, ScrollEventArgs e)
-        {
-            CurrentScrollValue = e.NewValue;
+            internetErrorPictureBox.Parent = this;
+            internetErrorPictureBox.Left = Wrap.Left;
+            internetErrorPictureBox.Top = Wrap.Top;
+            internetErrorPictureBox.Width = Wrap.Width;
+            internetErrorPictureBox.Height = Wrap.Height;
+            internetErrorPictureBox.BackgroundImageLayout = ImageLayout.Center;
+            internetErrorPictureBox.BackgroundImage = ProjectResources.InternetErrorImage;
+            internetErrorPictureBox.Visible = false;
         }
 
         private void SearchResultsList_GotFocus(object sender, EventArgs e)
@@ -146,20 +155,39 @@ namespace Flamingo
             {
                 if (!CheckForInternetConnection())
                 {
-                    SearchTextBox.Text = "Отсутствует подключение к интернету";
-                    SearchTextBox.ForeColor = Color.Red;
-                    SearchTextBox.ReadOnly = true;
-                    CityTextBox.ReadOnly = true;
+                    Action action = () =>
+                    {
+                        if (!isSearchActive)
+                        {
+                            internetErrorPictureBox.Visible = true;
+                            preloader.Visible = false;
+                            Wrap.Visible = false;
+                            SearchResultsList.Visible = false;
+                            SideBar.Visible = false;
+                            SearchTextBox.ReadOnly = true;
+                            CityTextBox.ReadOnly = true;
+                        }
+                    };
+                    Invoke(action);
                 }
                 else
                 {
-                    if (SearchTextBox.ForeColor.Equals(Color.Red)) 
-                        SearchTextBox.Text = "";
-                    SearchTextBox.ForeColor = Color.Black;
-                    SearchTextBox.ReadOnly = false;
-                    CityTextBox.ReadOnly = false;
+                    Action action = () =>
+                    {
+                        if (!isSearchActive)
+                        {
+                            internetErrorPictureBox.Visible = false;
+                            preloader.Visible = true;
+                            Wrap.Visible = true;
+                            SearchResultsList.Visible = true;
+                            SideBar.Visible = true;
+                            SearchTextBox.ReadOnly = false;
+                            CityTextBox.ReadOnly = false;
+                        }
+                    };
+                    Invoke(action);
                 }
-                Thread.Sleep(500);
+                Thread.Sleep(1500);
             }
         }
 
@@ -221,36 +249,23 @@ namespace Flamingo
             CloseButton.BackgroundImage = ProjectResources.FocussedCloseButton;
         }
 
-        private void EnterFocus(object sender, EventArgs e)
-        {
-            if ((sender as TextBox).Text.Equals("Введите название города") || (sender as TextBox).Text.Equals("Введите поисковой запрос"))
-                (sender as TextBox).Text = "";
-            (sender as TextBox).ForeColor = Color.Black;
-        }
-
-        private void LeaveFocus(object sender, EventArgs e)
-        {
-            if((sender as TextBox).Text.Equals("") && (sender as TextBox).Name.Equals("tbCityIpnut"))
-                (sender as TextBox).Text = "Введите название города";
-            else if ((sender as TextBox).Text.Equals("") && (sender as TextBox).Name.Equals("tbSearchInput"))
-                (sender as TextBox).Text = "Введите поисковой запрос";
-            (sender as TextBox).ForeColor = Color.Gray;
-        }
-
         private async void StartSearch()
         {
             SearchResultsList.Text = "";
+            isSearchActive = true;
+            internetErrorPictureBox.Visible = false;
             Wrap.Visible = false;
             SearchResultsList.Visible = false;
             SideBar.Visible = false;
 
             if (EventsRadioButton.Checked)
             {
-                MessageBox.Show("Test");
-                //await Task.Run(() =>
-                //{
-                //    eventsRootObject = StartPredictHQSearchAsync().Result;
-                //});
+                await Task.Run(() =>
+                {
+                    GoogleAPI googleAPI = new GoogleAPI();
+                    googleAPI.Search();
+                    eventsRootObject = StartPredictHQSearchAsync().Result;
+                });
             }
             else if (OrganizationsRadioButton.Checked)
             {
@@ -258,21 +273,22 @@ namespace Flamingo
                 {
                     rootObject = StartYandexSearchAsync().Result;
                 });
-            }
-
-            await Task.Run(() =>
-            {
-                SearchResultsList.Text = GetStringResultAsync().Result; 
-
-                using (Graphics graphics = SearchResultsList.CreateGraphics())
+                await Task.Run(() =>
                 {
-                    SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height) + 530;
-                    SearchResultsList.Width = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width-300);
-                }
-            });
+                    SearchResultsList.Text = GetStringResultAsync().Result;
+
+                    using (Graphics graphics = SearchResultsList.CreateGraphics())
+                    {
+                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height) + 530;
+                        SearchResultsList.Width = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width - 300);
+                    }
+                });
+            }
 
             SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
             SearchResultsList.SelectionStart = 0;
+            isSearchActive = false;
+            internetErrorPictureBox.Visible = true;
             Wrap.Visible = true;
             SearchResultsList.Visible = true;
             SideBar.Visible = true;
@@ -334,6 +350,8 @@ namespace Flamingo
         {
             Wrap.Width = ClientSize.Width;
             Wrap.Height = ClientSize.Height - toolStrip1.Height - cGrip;
+            internetErrorPictureBox.Width = Wrap.Width;
+            internetErrorPictureBox.Height = Wrap.Height;
             SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
             Wrap.VerticalScroll.Value = Wrap.VerticalScroll.Minimum;
             if (preloader != null)
