@@ -279,8 +279,8 @@ namespace Flamingo
 
                     using (Graphics graphics = SearchResultsList.CreateGraphics())
                     {
-                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height) + 530;
-                        SearchResultsList.Width = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width - 300);
+                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height);
+                        SearchResultsList.Width = /*(int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width);*/400;
                     }
                 });
             }
