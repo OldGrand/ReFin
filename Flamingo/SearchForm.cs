@@ -259,7 +259,7 @@ namespace Flamingo
         private async void StartSearch()
         {
             SearchResultsList.Text = "";
-            SearchResultsList.Height = 100;
+            SearchResultsList.Height = 0;
             isSearchActive = true;
             internetErrorPictureBox.Visible = false;
             Wrap.Visible = false;
@@ -271,7 +271,6 @@ namespace Flamingo
                 await Task.Run(() =>
                 {
                     eventsRootObject = StartPredictHQSearchAsync().Result;
-                    MessageBox.Show(eventsRootObject.results.Count.ToString());
                 });
                 await Task.Run(() =>
                 {
@@ -282,6 +281,7 @@ namespace Flamingo
                         SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height);
                         SearchResultsList.Width = /*(int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width);*/400;
                     }
+                    SearchResultsList.BackColor = Color.Blue;
                 });
             }
             else if (OrganizationsRadioButton.Checked)
