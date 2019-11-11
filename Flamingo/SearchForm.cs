@@ -278,10 +278,9 @@ namespace Flamingo
 
                     using (Graphics graphics = SearchResultsList.CreateGraphics())
                     {
-                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height);
+                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+20;
                         SearchResultsList.Width = /*(int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width);*/400;
                     }
-                    SearchResultsList.BackColor = Color.Blue;
                 });
             }
             else if (OrganizationsRadioButton.Checked)

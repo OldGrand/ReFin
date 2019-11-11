@@ -21,7 +21,8 @@ namespace Flamingo.API
         {
             _startDate = startDate;
             _endDate = endDate;
-            _event = @event;
+            YandexTranslator yandexTranslator = new YandexTranslator();
+            _event = yandexTranslator.Translate(@event);
             _city = city;
             _fileName = $"{fileNameWithoutExtension}.json";
             _advancedSearchOptions = "";

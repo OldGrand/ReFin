@@ -25,7 +25,7 @@ namespace Flamingo.Classes
 
         public void StartSearch()
         {
-            string url = @"https://search-maps.yandex.ru/v1/?text=" + $"{_organization}, {_city}{_advancedSearchOptions}&type=biz&lang=ru_RU&results=500&apikey=153db2c3-2713-40f0-8213-e8f61917292d";
+            string url = @"https://search-maps.yandex.ru/v1/?text=" + $"{_organization}, {_city}{_advancedSearchOptions}&type=biz&lang=ru_RU&results=10&apikey=153db2c3-2713-40f0-8213-e8f61917292d";
 
             WebRequest request = WebRequest.Create(url);
 
