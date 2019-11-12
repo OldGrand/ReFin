@@ -27,11 +27,6 @@ namespace Flamingo.JSON_Adjustment
                 sw.Position = 0;
                 _eventsRootObject = new DataContractJsonSerializer(typeof(EventsRootObject)).ReadObject(sw) as EventsRootObject;
             }
-            using (FileStream sw = new FileStream("Check.json", FileMode.OpenOrCreate))
-            {
-                sw.Position = 0;
-                new DataContractJsonSerializer(typeof(EventsRootObject)).WriteObject(sw, _eventsRootObject);
-            }
             return _eventsRootObject;
         }
     }

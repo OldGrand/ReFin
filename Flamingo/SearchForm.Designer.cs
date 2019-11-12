@@ -30,7 +30,6 @@
         {
             this.Wrap = new System.Windows.Forms.Panel();
             this.SideBar = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.OrganizationsRadioButton = new System.Windows.Forms.RadioButton();
             this.EventsRadioButton = new System.Windows.Forms.RadioButton();
             this.SearchResultsList = new System.Windows.Forms.TextBox();
@@ -40,8 +39,12 @@
             this.ExpandButton = new System.Windows.Forms.PictureBox();
             this.CollapseButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
-            this.SearchTextBox = new Flamingo.Classes.PHTextBox();
+            this.StartDate = new System.Windows.Forms.DateTimePicker();
+            this.EndDate = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.CityTextBox = new Flamingo.Classes.PHTextBox();
+            this.SearchTextBox = new Flamingo.Classes.PHTextBox();
             this.Wrap.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CityPictureBox)).BeginInit();
@@ -67,22 +70,16 @@
             this.SideBar.BackColor = System.Drawing.Color.Transparent;
             this.SideBar.BackgroundImage = global::Flamingo.ProjectResources.SideBarBG;
             this.SideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SideBar.Controls.Add(this.groupBox1);
+            this.SideBar.Controls.Add(this.label1);
+            this.SideBar.Controls.Add(this.label2);
+            this.SideBar.Controls.Add(this.EndDate);
+            this.SideBar.Controls.Add(this.StartDate);
             this.SideBar.Controls.Add(this.OrganizationsRadioButton);
             this.SideBar.Controls.Add(this.EventsRadioButton);
             this.SideBar.Location = new System.Drawing.Point(21, 20);
             this.SideBar.Name = "SideBar";
             this.SideBar.Size = new System.Drawing.Size(175, 241);
             this.SideBar.TabIndex = 4;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(14, 75);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(129, 148);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Сортировка";
             // 
             // OrganizationsRadioButton
             // 
@@ -192,18 +189,39 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // SearchTextBox
+            // StartDate
             // 
-            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
-            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
-            this.SearchTextBox.TabIndex = 28;
-            this.SearchTextBox.Text = "поисковой запрос";
+            this.StartDate.Location = new System.Drawing.Point(14, 112);
+            this.StartDate.Name = "StartDate";
+            this.StartDate.Size = new System.Drawing.Size(143, 22);
+            this.StartDate.TabIndex = 3;
+            // 
+            // EndDate
+            // 
+            this.EndDate.Location = new System.Drawing.Point(14, 167);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(143, 22);
+            this.EndDate.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(3, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Дата завершения";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(23, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Дата начала";
             // 
             // CityTextBox
             // 
@@ -217,6 +235,19 @@
             this.CityTextBox.Size = new System.Drawing.Size(170, 33);
             this.CityTextBox.TabIndex = 29;
             this.CityTextBox.Text = "город";
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
+            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
+            this.SearchTextBox.TabIndex = 28;
+            this.SearchTextBox.Text = "поисковой запрос";
             // 
             // SearchForm
             // 
@@ -266,10 +297,13 @@
         private System.Windows.Forms.PictureBox CityPictureBox;
         private System.Windows.Forms.TextBox SearchResultsList;
         private System.Windows.Forms.Panel SideBar;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton OrganizationsRadioButton;
         private System.Windows.Forms.RadioButton EventsRadioButton;
         private Classes.PHTextBox SearchTextBox;
         private Classes.PHTextBox CityTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker EndDate;
+        private System.Windows.Forms.DateTimePicker StartDate;
+        private System.Windows.Forms.Label label1;
     }
 }

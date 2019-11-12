@@ -11,12 +11,16 @@ namespace Flamingo.API
     class PredictAPI
     {
         private string _event;
+        private string _startDate;
+        private string _endDate;
         private string _city;
         private string _advancedSearchOptions;
         private string _fileName;
 
-        public PredictAPI(string @event, string city, string fileNameWithoutExtension)
+        public PredictAPI(string @event, string city, string startDate, string endDate, string fileNameWithoutExtension)
         {
+            _startDate = startDate;
+            _endDate = endDate;
             _event = @event;
             _city = city;
             _fileName = $"{fileNameWithoutExtension}.json";
@@ -25,7 +29,7 @@ namespace Flamingo.API
 
         public void StartSearch()
         {
-            //Авторизация
+            #region Авторизация
             //WebRequest request = WebRequest.Create("https://api.predicthq.com/v1/token/");
             //request.Method = "POST";
             //string sName = "Authorization: Basic base64(zB4PpS4zbzY:2JgGw3OWdnLiz78crYz_3q_Js0aZ3cvIYFhodPW773Viwvm5O3v68A)";
@@ -37,15 +41,14 @@ namespace Flamingo.API
             //{
             //    dataStream.Write(byteArray, 0, byteArray.Length);
             //}
-
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://api.predicthq.com/v1/events/?q=jazz&country=US&active.gte=2019-10-22&active.lte=2019-10-25&active.tz=America/Los_Angeles&sort=rank");
+            #endregion
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://api.predicthq.com/v1/events/?q=" + $"{_event}&country=US&active.gte={_startDate}&active.lte={_endDate}&active.tz=America/Los_Angeles&sort=rank");
             req.Headers.Add("Authorization: Bearer 3kZgSkhejEg4zgqYVw8xObQQOVi-XvmZLvYbn08N");
             req.Accept = "application/json";
 
             HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
             Stream stream = resp.GetResponseStream();
             StreamReader sr = new StreamReader(stream);
-            //resp.Close();
             string text = sr.ReadToEnd();
             sr.Close();
             using (var sw = new StreamWriter("EventsSearchResult.json"))

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace Flamingo
 {
@@ -35,7 +36,7 @@ namespace Flamingo
             });
             timer.Interval = 10;
             timer.Start();
-            
+
             this.StartPosition = FormStartPosition.CenterScreen;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
@@ -94,6 +95,12 @@ namespace Flamingo
             internetErrorPictureBox.BackgroundImageLayout = ImageLayout.Center;
             internetErrorPictureBox.BackgroundImage = ProjectResources.InternetErrorImage;
             internetErrorPictureBox.Visible = false;
+
+            StartDate.MinDate = DateTime.Now;
+            EndDate.MinDate = DateTime.Now.AddDays(1);
+
+            StartDate.ValueChanged += DateValueChanged;
+            EndDate.ValueChanged += DateValueChanged;
         }
 
         private void SearchResultsList_GotFocus(object sender, EventArgs e)
@@ -252,6 +259,7 @@ namespace Flamingo
         private async void StartSearch()
         {
             SearchResultsList.Text = "";
+            SearchResultsList.Height = 100;
             isSearchActive = true;
             internetErrorPictureBox.Visible = false;
             Wrap.Visible = false;
@@ -262,9 +270,18 @@ namespace Flamingo
             {
                 await Task.Run(() =>
                 {
-                    GoogleAPI googleAPI = new GoogleAPI();
-                    googleAPI.Search();
                     eventsRootObject = StartPredictHQSearchAsync().Result;
+                    MessageBox.Show(eventsRootObject.results.Count.ToString());
+                });
+                await Task.Run(() =>
+                {
+                    SearchResultsList.Text = GetStringEventResultAsync().Result;
+
+                    using (Graphics graphics = SearchResultsList.CreateGraphics())
+                    {
+                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height) + 530;
+                        SearchResultsList.Width = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width - 300);
+                    }
                 });
             }
             else if (OrganizationsRadioButton.Checked)
@@ -305,6 +322,18 @@ namespace Flamingo
                 return result;
             });
         }
+       
+        private async Task<string> GetStringEventResultAsync()
+        {
+            return await Task.Run(() =>
+            {
+                string result = "";
+                foreach (var item in eventsRootObject.results)
+                    if (!string.IsNullOrWhiteSpace(item.ToString()))
+                        result += $"{item}{Environment.NewLine}{Environment.NewLine}";
+                return result;
+            });
+        }
 
         private async Task<RootObject> StartYandexSearchAsync()
         {
@@ -321,7 +350,7 @@ namespace Flamingo
         {
             return await Task.Run(() =>
             {
-                PredictAPI predictAPI = new PredictAPI(SearchTextBox.Text, CityTextBox.Text, "SearchResult");
+                PredictAPI predictAPI = new PredictAPI(SearchTextBox.Text, CityTextBox.Text, String.Join("-", StartDate.Value.ToShortDateString().Split('.').Reverse()), String.Join("-", EndDate.Value.ToShortDateString().Split('.').Reverse()), "EventsSearchResult");
                 predictAPI.StartSearch();
                 EventsResultDeserializer eventsDeserializer = new EventsResultDeserializer("EventsSearchResult");
                 return eventsDeserializer.StartDeserializing();
@@ -387,6 +416,15 @@ namespace Flamingo
         private void SearchForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             inthernetChecker.Abort();
+        }
+
+        private void DateValueChanged(object sender, EventArgs e)
+        {
+            if (EndDate.Value.Subtract(StartDate.Value).TotalSeconds < 0)
+            {
+                MessageBox.Show("Момент завершения не может произайти раньше начала");
+                StartDate.Value = StartDate.MinDate;
+            }
         }
     }
 }

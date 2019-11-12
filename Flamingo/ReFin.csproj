@@ -213,7 +213,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\GoogleAPI.cs" />
     <Compile Include="API\PredictAPI.cs" />
     <Compile Include="Classes\PHTextBox.cs">
       <SubType>Component</SubType>
