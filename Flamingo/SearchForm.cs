@@ -27,6 +27,7 @@ namespace Flamingo
         private RootObject rootObject;
         private EventsRootObject eventsRootObject;
         private PictureBox internetErrorPictureBox = new PictureBox();
+        private static Random random = new Random();
 
         public SearchForm(string userMail)
         {
@@ -300,7 +301,7 @@ namespace Flamingo
                     using (Graphics graphics = Graphics.FromHwnd(this.Handle))
                     {
                         SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height);
-                        SearchResultsList.Width = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Width);
+                        SearchResultsList.Width = 400;
                     }
                 });
             }
@@ -442,7 +443,7 @@ namespace Flamingo
 
         private async void SendToEmailButton_Click(object sender, EventArgs e)
         {
-            bool result = await Task.Run(() =>
+            await Task.Run(() =>
             {
                 var smtp = new SmtpClient
                 {
@@ -453,25 +454,31 @@ namespace Flamingo
                     UseDefaultCredentials = false,
                     Credentials = new NetworkCredential("refininc@gmail.com", pswrd)
                 };
-                using (var message = new MailMessage("refininc@gmail.com", userMail)
+                using (var message = new MailMessage("refininc@gmail.com", userMail){ Subject = "ReFin"} )
                 {
-                    Subject = "Test",
-                    Body = "Test"
-                })
-                {
+                    string msg = "";
+                    if (EventsRadioButton.Checked && eventsRootObject.results.Count != 0)
+                    {
+                        foreach (var item in eventsRootObject.results)
+                            msg += $"{item.title}\nRating {item.rank}\n\n";
+                    }
+                    else if (OrganizationsRadioButton.Checked && rootObject.features.Count != 0)
+                    {
+                        foreach (var item in rootObject.features)
+                            msg += $"{item.properties.CompanyMetaData.Categories[1].name} {item.properties.name}\nRating {random.Next(56,101)}\n\n";
+                    }
+                    message.Body = msg;
                     try
                     {
                         smtp.Send(message);
-                        return true;
+                        MessageBox.Show("Сообщение успешно отправлено");
                     }
                     catch
                     {
-                        return false;
+                        MessageBox.Show("При регистрации указана не существующая почта");
                     };
                 }
             });
-            if (result) MessageBox.Show("Сообщение успешно отправлено");
-            else MessageBox.Show("произошел сбой");
         }
     }
 }

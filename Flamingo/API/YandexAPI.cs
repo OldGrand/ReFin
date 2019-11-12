@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Flamingo.API;
+using System.IO;
 using System.Net;
 
 namespace Flamingo.Classes
@@ -12,8 +13,9 @@ namespace Flamingo.Classes
 
         public YandexAPI(string organization, string city, string fileNameWithoutExtension)
         {
-            _organization = organization;
-            _city = city;
+            YandexTranslator yandexTranslator = new YandexTranslator();
+            _organization = yandexTranslator.Translate(organization);
+            _city = yandexTranslator.Translate(city);
             _fileName = $"{fileNameWithoutExtension}.json";
             _advancedSearchOptions = "";
         }
@@ -25,7 +27,7 @@ namespace Flamingo.Classes
 
         public void StartSearch()
         {
-            string url = @"https://search-maps.yandex.ru/v1/?text=" + $"{_organization}, {_city}{_advancedSearchOptions}&type=biz&lang=ru_RU&results=10&apikey=153db2c3-2713-40f0-8213-e8f61917292d";
+            string url = @"https://search-maps.yandex.ru/v1/?text=" + $"{_organization}, {_city}{_advancedSearchOptions}&type=biz&lang=en_US&results=10&apikey=153db2c3-2713-40f0-8213-e8f61917292d";
 
             WebRequest request = WebRequest.Create(url);
 
