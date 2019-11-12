@@ -30,6 +30,7 @@
         {
             this.Wrap = new System.Windows.Forms.Panel();
             this.SideBar = new System.Windows.Forms.Panel();
+            this.SendToEmailButton = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EndDate = new System.Windows.Forms.DateTimePicker();
@@ -38,15 +39,16 @@
             this.EventsRadioButton = new System.Windows.Forms.RadioButton();
             this.SearchResultsList = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.CityTextBox = new Flamingo.Classes.PHTextBox();
+            this.SearchTextBox = new Flamingo.Classes.PHTextBox();
             this.CityPictureBox = new System.Windows.Forms.PictureBox();
             this.SearchPictureBox = new System.Windows.Forms.PictureBox();
             this.ExpandButton = new System.Windows.Forms.PictureBox();
             this.CollapseButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
-            this.CityTextBox = new Flamingo.Classes.PHTextBox();
-            this.SearchTextBox = new Flamingo.Classes.PHTextBox();
             this.Wrap.SuspendLayout();
             this.SideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SendToEmailButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CityPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpandButton)).BeginInit();
@@ -70,6 +72,7 @@
             this.SideBar.BackColor = System.Drawing.Color.Transparent;
             this.SideBar.BackgroundImage = global::Flamingo.ProjectResources.SideBarBG;
             this.SideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SideBar.Controls.Add(this.SendToEmailButton);
             this.SideBar.Controls.Add(this.label1);
             this.SideBar.Controls.Add(this.label2);
             this.SideBar.Controls.Add(this.EndDate);
@@ -81,11 +84,24 @@
             this.SideBar.Size = new System.Drawing.Size(175, 241);
             this.SideBar.TabIndex = 4;
             // 
+            // SendToEmailButton
+            // 
+            this.SendToEmailButton.BackgroundImage = global::Flamingo.ProjectResources.SendToEmailButton;
+            this.SendToEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SendToEmailButton.Location = new System.Drawing.Point(14, 184);
+            this.SendToEmailButton.Name = "SendToEmailButton";
+            this.SendToEmailButton.Size = new System.Drawing.Size(144, 42);
+            this.SendToEmailButton.TabIndex = 8;
+            this.SendToEmailButton.TabStop = false;
+            this.SendToEmailButton.Click += new System.EventHandler(this.SendToEmailButton_Click);
+            this.SendToEmailButton.MouseEnter += new System.EventHandler(this.SendToEmailButton_MouseEnter);
+            this.SendToEmailButton.MouseLeave += new System.EventHandler(this.SendToEmailButton_MouseLeave);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(23, 90);
+            this.label1.Location = new System.Drawing.Point(24, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 18);
             this.label1.TabIndex = 7;
@@ -95,7 +111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 146);
+            this.label2.Location = new System.Drawing.Point(4, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 18);
             this.label2.TabIndex = 6;
@@ -103,14 +119,14 @@
             // 
             // EndDate
             // 
-            this.EndDate.Location = new System.Drawing.Point(14, 167);
+            this.EndDate.Location = new System.Drawing.Point(15, 145);
             this.EndDate.Name = "EndDate";
             this.EndDate.Size = new System.Drawing.Size(143, 22);
             this.EndDate.TabIndex = 4;
             // 
             // StartDate
             // 
-            this.StartDate.Location = new System.Drawing.Point(14, 112);
+            this.StartDate.Location = new System.Drawing.Point(15, 90);
             this.StartDate.Name = "StartDate";
             this.StartDate.Size = new System.Drawing.Size(143, 22);
             this.StartDate.TabIndex = 3;
@@ -162,6 +178,32 @@
             this.toolStrip1.Size = new System.Drawing.Size(1100, 64);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // CityTextBox
+            // 
+            this.CityTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CityTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.CityTextBox.Location = new System.Drawing.Point(16, 14);
+            this.CityTextBox.Name = "CityTextBox";
+            this.CityTextBox.PlaceHolderText = "город";
+            this.CityTextBox.Size = new System.Drawing.Size(170, 33);
+            this.CityTextBox.TabIndex = 29;
+            this.CityTextBox.Text = "город";
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
+            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
+            this.SearchTextBox.TabIndex = 28;
+            this.SearchTextBox.Text = "поисковой запрос";
             // 
             // CityPictureBox
             // 
@@ -223,32 +265,6 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // CityTextBox
-            // 
-            this.CityTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CityTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.CityTextBox.Location = new System.Drawing.Point(16, 14);
-            this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.PlaceHolderText = "город";
-            this.CityTextBox.Size = new System.Drawing.Size(170, 33);
-            this.CityTextBox.TabIndex = 29;
-            this.CityTextBox.Text = "город";
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
-            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
-            this.SearchTextBox.TabIndex = 28;
-            this.SearchTextBox.Text = "поисковой запрос";
-            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,6 +292,7 @@
             this.Wrap.PerformLayout();
             this.SideBar.ResumeLayout(false);
             this.SideBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SendToEmailButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CityPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpandButton)).EndInit();
@@ -305,5 +322,6 @@
         private System.Windows.Forms.DateTimePicker EndDate;
         private System.Windows.Forms.DateTimePicker StartDate;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox SendToEmailButton;
     }
 }

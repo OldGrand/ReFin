@@ -49,4 +49,8 @@ C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.CoreCompileInputs.
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.exe
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.pdb
+C:\Users\Sergey\Desktop\ReFin\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Sergey\Desktop\ReFin\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Sergey\Desktop\ReFin\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Sergey\Desktop\ReFin\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csprojAssemblyReference.cache

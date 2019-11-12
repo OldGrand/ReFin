@@ -110,7 +110,7 @@ namespace Flamingo
             if (accessor.VerifyUserData(LoginTextBox.Text, PasswordTextBox.Text))
             {
                 this.Hide();
-                SearchForm mainForm = new SearchForm();
+                SearchForm mainForm = new SearchForm(LoginTextBox.Text);
                 mainForm.Closed += (send, args) => this.Close();
                 mainForm.Show();
             }

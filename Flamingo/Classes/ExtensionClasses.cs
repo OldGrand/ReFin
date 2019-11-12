@@ -8,7 +8,7 @@ namespace Flamingo.Extension_Classes
 {
     public static class ExtensionClasses
     {
-        public static bool EmailValidation(string email) => new Regex(@"^([A-Za-z0-9]+[\._]?[A-Za-z0-9]+)+@[a-zA-Z]+?\.[a-zA-Z]{2,6}$").IsMatch(email);
+        public static bool EmailValidation(string email) => new Regex(@"^([A-Za-z0-9]+[\._-]?[A-Za-z0-9]+)+@[a-zA-Z]+?\.[a-zA-Z]{2,6}$").IsMatch(email);
 
         public static void CenteringElements(ControlCollection controls, Size clientSize)
         {

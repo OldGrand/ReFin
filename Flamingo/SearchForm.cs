@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Linq;
+using System.Net.Mail;
 
 namespace Flamingo
 {
@@ -16,6 +17,8 @@ namespace Flamingo
     {
         [DllImport("user32")]
         private static extern bool HideCaret(IntPtr hWnd);
+        private const string pswrd = "43896y352refhselgue";
+        private string userMail;
         private bool isSearchActive;
         private const int cGrip = 16;     
         private const int cCaption = 32;
@@ -25,8 +28,9 @@ namespace Flamingo
         private EventsRootObject eventsRootObject;
         private PictureBox internetErrorPictureBox = new PictureBox();
 
-        public SearchForm()
+        public SearchForm(string userMail)
         {
+            this.userMail = userMail;
             InitializeComponent();
             Opacity = 0;
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
@@ -424,6 +428,50 @@ namespace Flamingo
                 MessageBox.Show("Момент завершения не может произайти раньше начала");
                 StartDate.Value = StartDate.MinDate;
             }
+        }
+
+        private void SendToEmailButton_MouseEnter(object sender, EventArgs e)
+        {
+            SendToEmailButton.BackgroundImage = ProjectResources.SendToMailFocused;
+        }
+
+        private void SendToEmailButton_MouseLeave(object sender, EventArgs e)
+        {
+            SendToEmailButton.BackgroundImage = ProjectResources.SendToEmailButton;
+        }
+
+        private async void SendToEmailButton_Click(object sender, EventArgs e)
+        {
+            bool result = await Task.Run(() =>
+            {
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential("refininc@gmail.com", pswrd)
+                };
+                using (var message = new MailMessage("refininc@gmail.com", userMail)
+                {
+                    Subject = "Test",
+                    Body = "Test"
+                })
+                {
+                    try
+                    {
+                        smtp.Send(message);
+                        return true;
+                    }
+                    catch
+                    {
+                        return false;
+                    };
+                }
+            });
+            if (result) MessageBox.Show("Сообщение успешно отправлено");
+            else MessageBox.Show("произошел сбой");
         }
     }
 }
