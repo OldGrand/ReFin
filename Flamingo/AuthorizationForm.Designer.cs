@@ -30,6 +30,7 @@ namespace Flamingo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
             this.RegistrationButton = new System.Windows.Forms.Button();
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.CollapseButton = new System.Windows.Forms.PictureBox();
@@ -168,6 +169,7 @@ namespace Flamingo
             this.Controls.Add(this.RegistrationButton);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AuthorizationForm";
             this.Text = "Authorization";
             ((System.ComponentModel.ISupportInitialize)(this.CollapseButton)).EndInit();

@@ -284,7 +284,6 @@ namespace Flamingo
                     using (Graphics graphics = Graphics.FromHwnd(this.Handle))
                     {
                         SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+400;
-                        SearchResultsList.Width = 400;
                     }
                 });
             }
@@ -301,7 +300,6 @@ namespace Flamingo
                     using (Graphics graphics = Graphics.FromHwnd(this.Handle))
                     {
                         SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height);
-                        SearchResultsList.Width = 400;
                     }
                 });
             }
@@ -466,6 +464,11 @@ namespace Flamingo
                     {
                         foreach (var item in rootObject.features)
                             msg += $"{item.properties.CompanyMetaData.Categories[1].name} {item.properties.name}\nRating {random.Next(56,101)}\n\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Не выполнен поисковой запрос");
+                        return;
                     }
                     message.Body = msg;
                     try

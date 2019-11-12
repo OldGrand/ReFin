@@ -385,5 +385,8 @@
   <ItemGroup>
     <None Include="Resources\SendToMailFocused.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

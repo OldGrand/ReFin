@@ -35,7 +35,7 @@ namespace Flamingo.Classes
 
             public override string ToString()
             {
-                return $"Адрес: {formatted_address}{Environment.NewLine}Заведение: {name}{Environment.NewLine}";
+                return $"Adress: {formatted_address}{Environment.NewLine}Building: {name}{Environment.NewLine}";
             }
         }
         [DataContract]
@@ -84,7 +84,7 @@ namespace Flamingo.Classes
 
             public override string ToString()
             {
-                return $"Название: {title}{Environment.NewLine}Описание: {description}{Environment.NewLine}Категория: {category}{Environment.NewLine}Начало: {start}{Environment.NewLine}Завершение: {end}{Environment.NewLine}Масштаб: {scope}{Environment.NewLine}Ранг: {rank}{Environment.NewLine}Локальный ранг {local_rank}{Environment.NewLine}Доп. сведения: {Environment.NewLine}{((entities.Count > 0) ? entities.First().ToString() : "-")}{Environment.NewLine}";
+                return $"Title: {title}{Environment.NewLine}Description: {description}{Environment.NewLine}Category: {category}{Environment.NewLine}Start: {start}{Environment.NewLine}End: {end}{Environment.NewLine}Scope: {scope}{Environment.NewLine}Rank: {rank}{Environment.NewLine}Local rank: {local_rank}{Environment.NewLine}Additional Info: {Environment.NewLine}{((entities.Count > 0) ? entities.First().ToString() : "-")}{Environment.NewLine}";
             }
         }
     }

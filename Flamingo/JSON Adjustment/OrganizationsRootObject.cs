@@ -189,16 +189,15 @@ namespace Flamingo
 
             public override string ToString()
             {
-                //TODO сделать кликабельной ссылку
                 string result = "";
                 try
                 {
-                    result = $"Название: {properties.name}{Environment.NewLine}Адрес: {properties.description}{Environment.NewLine}Сайт: {properties.CompanyMetaData.url}{Environment.NewLine}Время работы: {properties.CompanyMetaData.Hours.text}{Environment.NewLine}Номера телефонов:{Environment.NewLine}";
+                    result = $"Title: {properties.name}{Environment.NewLine}Adress: {properties.description}{Environment.NewLine}Site: {properties.CompanyMetaData.url}{Environment.NewLine}Working Hours: {properties.CompanyMetaData.Hours.text}{Environment.NewLine}Phone Numbers:{Environment.NewLine}";
                     foreach (Phone phone in properties.CompanyMetaData.Phones)
                     {
                         result += $"    {phone.formatted}{Environment.NewLine}";
                     }
-                    result += $"Категории:{Environment.NewLine}";
+                    result += $"Categories:{Environment.NewLine}";
                     foreach (Category category in properties.CompanyMetaData.Categories)
                     {
                         result += $"    {category.name}{Environment.NewLine}";

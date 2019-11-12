@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.ConfirmPasswordError = new System.Windows.Forms.Label();
             this.ErrorTextLabel = new System.Windows.Forms.Label();
@@ -184,6 +185,7 @@
             this.Controls.Add(this.RegistrationButton);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrationForm";
             this.Text = "Authorization";
             ((System.ComponentModel.ISupportInitialize)(this.CollapseButton)).EndInit();

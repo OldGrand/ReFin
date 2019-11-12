@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchForm));
             this.Wrap = new System.Windows.Forms.Panel();
             this.SideBar = new System.Windows.Forms.Panel();
             this.SendToEmailButton = new System.Windows.Forms.PictureBox();
@@ -39,13 +40,13 @@
             this.EventsRadioButton = new System.Windows.Forms.RadioButton();
             this.SearchResultsList = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.CityTextBox = new Flamingo.Classes.PHTextBox();
-            this.SearchTextBox = new Flamingo.Classes.PHTextBox();
             this.CityPictureBox = new System.Windows.Forms.PictureBox();
             this.SearchPictureBox = new System.Windows.Forms.PictureBox();
             this.ExpandButton = new System.Windows.Forms.PictureBox();
             this.CollapseButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
+            this.CityTextBox = new Flamingo.Classes.PHTextBox();
+            this.SearchTextBox = new Flamingo.Classes.PHTextBox();
             this.Wrap.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SendToEmailButton)).BeginInit();
@@ -160,9 +161,10 @@
             this.SearchResultsList.BackColor = System.Drawing.SystemColors.Window;
             this.SearchResultsList.Font = new System.Drawing.Font("SimSun", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchResultsList.Location = new System.Drawing.Point(315, 119);
+            this.SearchResultsList.MinimumSize = new System.Drawing.Size(400, 100);
             this.SearchResultsList.Multiline = true;
             this.SearchResultsList.Name = "SearchResultsList";
-            this.SearchResultsList.Size = new System.Drawing.Size(269, 106);
+            this.SearchResultsList.Size = new System.Drawing.Size(400, 106);
             this.SearchResultsList.TabIndex = 3;
             // 
             // toolStrip1
@@ -178,32 +180,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1100, 64);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // CityTextBox
-            // 
-            this.CityTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CityTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.CityTextBox.Location = new System.Drawing.Point(16, 14);
-            this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.PlaceHolderText = "город";
-            this.CityTextBox.Size = new System.Drawing.Size(170, 33);
-            this.CityTextBox.TabIndex = 29;
-            this.CityTextBox.Text = "город";
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
-            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
-            this.SearchTextBox.TabIndex = 28;
-            this.SearchTextBox.Text = "поисковой запрос";
             // 
             // CityPictureBox
             // 
@@ -265,6 +241,32 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // CityTextBox
+            // 
+            this.CityTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CityTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.CityTextBox.Location = new System.Drawing.Point(16, 14);
+            this.CityTextBox.Name = "CityTextBox";
+            this.CityTextBox.PlaceHolderText = "город";
+            this.CityTextBox.Size = new System.Drawing.Size(170, 33);
+            this.CityTextBox.TabIndex = 29;
+            this.CityTextBox.Text = "город";
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchTextBox.Font = new System.Drawing.Font("Sylfaen", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
+            this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
+            this.SearchTextBox.TabIndex = 28;
+            this.SearchTextBox.Text = "поисковой запрос";
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,6 +285,7 @@
             this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "SearchForm";
             this.Text = "AdditionalInfoForm";
