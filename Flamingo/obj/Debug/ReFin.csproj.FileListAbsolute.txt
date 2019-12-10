@@ -45,7 +45,6 @@ C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\Flamingo.AuthorizationForm.reso
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\Flamingo.Properties.Resources.resources
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\Flamingo.ProjectResources.resources
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.GenerateResource.cache
-C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.CoreCompileInputs.cache
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.exe
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.pdb
