@@ -137,7 +137,10 @@ namespace Flamingo
         {
             DataBaseAccessor accessor = new DataBaseAccessor("DataBase", "Users");
             if (accessor.RegisterUser(LoginTextBox.Text, PasswordTextBox.Text))
+            {
+                MessageBox.Show("Регистрация прошла успешно", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
+            }
             else
                 ErrorTextLabel.Visible = true;
         }
@@ -149,14 +152,7 @@ namespace Flamingo
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            var soundPlayer = new SoundPlayer(@"sound3.wav");
-            soundPlayer.Play();
             Close();
-        }
-
-        private void RegistrationButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

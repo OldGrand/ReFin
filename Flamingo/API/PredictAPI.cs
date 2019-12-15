@@ -43,17 +43,22 @@ namespace Flamingo.API
             //    dataStream.Write(byteArray, 0, byteArray.Length);
             //}
             #endregion
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://api.predicthq.com/v1/events/?q=" + $"{_event}&country=US&active.gte={_startDate}&active.lte={_endDate}&active.tz=America/Los_Angeles&sort=rank");
-            req.Headers.Add("Authorization: Bearer 3kZgSkhejEg4zgqYVw8xObQQOVi-XvmZLvYbn08N");
-            req.Accept = "application/json";
+            try
+            {
+                System.Windows.Forms.MessageBox.Show(String.Join("_", _city.Split(new[] { '.', ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)));
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://api.predicthq.com/v1/events/?q=" + $"{_event}&country=US&active.gte={_startDate}&active.lte={_endDate}&active.tz=America/{String.Join("_", _city.Split(new[] { '.', ' ', ',' }, StringSplitOptions.RemoveEmptyEntries))}&sort=rank");
+                req.Headers.Add("Authorization: Bearer 3kZgSkhejEg4zgqYVw8xObQQOVi-XvmZLvYbn08N");
+                req.Accept = "application/json";
 
-            HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
-            Stream stream = resp.GetResponseStream();
-            StreamReader sr = new StreamReader(stream);
-            string text = sr.ReadToEnd();
-            sr.Close();
-            using (var sw = new StreamWriter("EventsSearchResult.json"))
-                sw.Write(text);
+                HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
+                Stream stream = resp.GetResponseStream();
+                StreamReader sr = new StreamReader(stream);
+                string text = sr.ReadToEnd();
+                sr.Close();
+                using (var sw = new StreamWriter("EventsSearchResult.json"))
+                    sw.Write(text);
+            }
+            catch { }
         }
     }
 }

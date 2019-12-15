@@ -103,7 +103,6 @@ namespace Flamingo
             this.AuthorizationButton.Size = new System.Drawing.Size(160, 37);
             this.AuthorizationButton.TabIndex = 16;
             this.AuthorizationButton.TabStop = false;
-            this.AuthorizationButton.Click += new System.EventHandler(this.AuthorizationButton_Click);
             // 
             // ShowPasswordButton
             // 

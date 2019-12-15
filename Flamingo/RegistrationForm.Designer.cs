@@ -117,7 +117,6 @@
             this.RegistrationButton.Size = new System.Drawing.Size(160, 37);
             this.RegistrationButton.TabIndex = 10;
             this.RegistrationButton.TabStop = false;
-            this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButton_Click);
             // 
             // button1
             // 

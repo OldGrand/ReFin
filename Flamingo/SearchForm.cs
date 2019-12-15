@@ -283,7 +283,6 @@ namespace Flamingo
                 await Task.Run(() =>
                 {
                     SearchResultsList.Text = GetStringEventResultAsync().Result;
-
                     using (Graphics graphics = Graphics.FromHwnd(this.Handle))
                     {
                         SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+400;
@@ -299,10 +298,9 @@ namespace Flamingo
                 await Task.Run(() =>
                 {
                     SearchResultsList.Text = GetStringResultAsync().Result;
-
                     using (Graphics graphics = Graphics.FromHwnd(this.Handle))
                     {
-                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height);
+                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+200;
                     }
                 });
             }
@@ -322,9 +320,13 @@ namespace Flamingo
             return await Task.Run(() =>
             {
                 string result = "";
-                foreach (var item in rootObject.features)
-                    if (!string.IsNullOrWhiteSpace(item.ToString()))
-                        result += $"{item}{Environment.NewLine}{Environment.NewLine}";
+                try
+                {
+                    foreach (var item in rootObject.features)
+                        if (!string.IsNullOrWhiteSpace(item.ToString()))
+                            result += $"{item}{Environment.NewLine}{Environment.NewLine}";
+                }
+                catch { }
                 return result;
             });
         }
@@ -333,10 +335,14 @@ namespace Flamingo
         {
             return await Task.Run(() =>
             {
-                string result = "";
-                foreach (var item in eventsRootObject.results)
-                    if (!string.IsNullOrWhiteSpace(item.ToString()))
-                        result += $"{item}{Environment.NewLine}{Environment.NewLine}";
+                string result = ""; 
+                try
+                {
+                    foreach (var item in eventsRootObject.results)
+                        if (!string.IsNullOrWhiteSpace(item.ToString()))
+                            result += $"{item}{Environment.NewLine}{Environment.NewLine}";
+                }
+                catch { }
                 return result;
             });
         }
@@ -411,6 +417,7 @@ namespace Flamingo
         {
             if (e.KeyCode == Keys.Enter)
             {
+                StartSearch();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
@@ -442,8 +449,6 @@ namespace Flamingo
 
         private async void SendToEmailButton_Click(object sender, EventArgs e)
         {
-            var soundPlayer = new SoundPlayer(@"sound3.wav");
-            soundPlayer.Play();
             await Task.Run(() =>
             {
                 var smtp = new SmtpClient
@@ -455,9 +460,9 @@ namespace Flamingo
                     UseDefaultCredentials = false,
                     Credentials = new NetworkCredential("refininc@gmail.com", pswrd)
                 };
-                try
+                using (var message = new MailMessage("refininc@gmail.com", userMail){ Subject = "ReFin"} )
                 {
-                    using (var message = new MailMessage("refininc@gmail.com", userMail){ Subject = "ReFin"} )
+                    try
                     {
                         string msg = "";
                         if (EventsRadioButton.Checked && eventsRootObject.results.Count != 0)
@@ -468,23 +473,19 @@ namespace Flamingo
                         else if (OrganizationsRadioButton.Checked && rootObject.features.Count != 0)
                         {
                             foreach (var item in rootObject.features)
-                                msg += $"{item.properties.CompanyMetaData.Categories[1].name} {item.properties.name}\nRating {random.Next(56,101)}\n\n";
-                        }
-                        else
-                        {
-                            MessageBox.Show("Не выполнен поисковой запрос");
-                            return;
+                                msg += $"{item.properties.CompanyMetaData.Categories[0].name} {item.properties.name}\nRating {random.Next(56, 101)}\n\n";
                         }
                         message.Body = msg;
 
-                            smtp.Send(message);
-                            MessageBox.Show("Сообщение успешно отправлено");
-                        }
+                        smtp.Send(message);
+                        MessageBox.Show("Сообщение успешно отправлено", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                catch
-                {
-                    MessageBox.Show("При регистрации указана не существующая почта");
-                };
+                    catch
+                    {
+                        MessageBox.Show("Не выполнен поисковой запрос", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                }
             });
         }
 

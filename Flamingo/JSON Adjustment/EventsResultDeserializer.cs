@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Flamingo.JSON_Adjustment
 {
@@ -24,8 +25,15 @@ namespace Flamingo.JSON_Adjustment
         {
             using (FileStream sw = new FileStream(_fileName, FileMode.Open))
             {
-                sw.Position = 0;
-                _eventsRootObject = new DataContractJsonSerializer(typeof(EventsRootObject)).ReadObject(sw) as EventsRootObject;
+                try
+                {
+                    sw.Position = 0;
+                    _eventsRootObject = new DataContractJsonSerializer(typeof(EventsRootObject)).ReadObject(sw) as EventsRootObject;
+                }
+                catch 
+                {
+                    MessageBox.Show("Ничего не найдео", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             return _eventsRootObject;
         }

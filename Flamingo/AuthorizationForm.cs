@@ -124,8 +124,6 @@ namespace Flamingo
 
         private void RegistrationButtonClickHandler(object sender, EventArgs e)
         {
-            var soundPlayer = new SoundPlayer(@"sound3.wav");
-            soundPlayer.Play();
             this.Hide();
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.ShowDialog();
@@ -150,12 +148,6 @@ namespace Flamingo
         private void ShowPasswordButton_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void AuthorizationButton_Click(object sender, EventArgs e)
-        {
-            var soundPlayer = new SoundPlayer(@"sound3.wav");
-            soundPlayer.Play();
         }
     }
 }

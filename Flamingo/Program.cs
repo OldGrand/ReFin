@@ -16,7 +16,7 @@ namespace Flamingo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SearchForm(""));
+            Application.Run(new AuthorizationForm());
         }
     }
 }
