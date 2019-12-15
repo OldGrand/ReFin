@@ -1,5 +1,6 @@
 ﻿using Flamingo.Extension_Classes;
 using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Flamingo
@@ -123,6 +124,8 @@ namespace Flamingo
 
         private void RegistrationButtonClickHandler(object sender, EventArgs e)
         {
+            var soundPlayer = new SoundPlayer(@"sound3.wav");
+            soundPlayer.Play();
             this.Hide();
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.ShowDialog();
@@ -142,6 +145,17 @@ namespace Flamingo
         private void ShowPasswordButtonMouseDown(object sender, MouseEventArgs e)
         {
             PasswordTextBox.PasswordChar = '\0';
+        }
+
+        private void ShowPasswordButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AuthorizationButton_Click(object sender, EventArgs e)
+        {
+            var soundPlayer = new SoundPlayer(@"sound3.wav");
+            soundPlayer.Play();
         }
     }
 }

@@ -55,7 +55,7 @@ namespace Flamingo
             this.RegistrationButton.Name = "RegistrationButton";
             this.RegistrationButton.Size = new System.Drawing.Size(152, 60);
             this.RegistrationButton.TabIndex = 5;
-            this.RegistrationButton.Text = "Registrtion";
+            this.RegistrationButton.Text = "Sign up";
             this.RegistrationButton.UseVisualStyleBackColor = true;
             this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButtonClickHandler);
             // 
@@ -103,6 +103,7 @@ namespace Flamingo
             this.AuthorizationButton.Size = new System.Drawing.Size(160, 37);
             this.AuthorizationButton.TabIndex = 16;
             this.AuthorizationButton.TabStop = false;
+            this.AuthorizationButton.Click += new System.EventHandler(this.AuthorizationButton_Click);
             // 
             // ShowPasswordButton
             // 
@@ -113,6 +114,7 @@ namespace Flamingo
             this.ShowPasswordButton.Size = new System.Drawing.Size(31, 28);
             this.ShowPasswordButton.TabIndex = 22;
             this.ShowPasswordButton.TabStop = false;
+            this.ShowPasswordButton.Click += new System.EventHandler(this.ShowPasswordButton_Click);
             // 
             // ErrorTextLabel
             // 
@@ -130,12 +132,12 @@ namespace Flamingo
             // 
             this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Rockwell", 14F);
+            this.PasswordTextBox.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.ForeColor = System.Drawing.Color.Gray;
             this.PasswordTextBox.Location = new System.Drawing.Point(107, 271);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PlaceHolderText = "password";
-            this.PasswordTextBox.Size = new System.Drawing.Size(155, 28);
+            this.PasswordTextBox.Size = new System.Drawing.Size(155, 20);
             this.PasswordTextBox.TabIndex = 25;
             this.PasswordTextBox.Text = "password";
             // 
@@ -143,12 +145,12 @@ namespace Flamingo
             // 
             this.LoginTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
             this.LoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LoginTextBox.Font = new System.Drawing.Font("Rockwell", 14F);
+            this.LoginTextBox.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginTextBox.ForeColor = System.Drawing.Color.Gray;
             this.LoginTextBox.Location = new System.Drawing.Point(107, 218);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.PlaceHolderText = "e-mail";
-            this.LoginTextBox.Size = new System.Drawing.Size(185, 28);
+            this.LoginTextBox.Size = new System.Drawing.Size(185, 20);
             this.LoginTextBox.TabIndex = 24;
             this.LoginTextBox.Text = "e-mail";
             // 

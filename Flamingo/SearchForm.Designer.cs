@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchForm));
             this.Wrap = new System.Windows.Forms.Panel();
             this.SideBar = new System.Windows.Forms.Panel();
@@ -40,6 +41,9 @@
             this.EventsRadioButton = new System.Windows.Forms.RadioButton();
             this.SearchResultsList = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.MoveNogginLeftTimer = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.Noggin = new System.Windows.Forms.PictureBox();
             this.CityPictureBox = new System.Windows.Forms.PictureBox();
             this.SearchPictureBox = new System.Windows.Forms.PictureBox();
             this.ExpandButton = new System.Windows.Forms.PictureBox();
@@ -50,6 +54,7 @@
             this.Wrap.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SendToEmailButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Noggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CityPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpandButton)).BeginInit();
@@ -181,6 +186,27 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // MoveNogginLeftTimer
+            // 
+            this.MoveNogginLeftTimer.Interval = 1;
+            this.MoveNogginLeftTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // Noggin
+            // 
+            this.Noggin.BackColor = System.Drawing.Color.Transparent;
+            this.Noggin.Image = global::Flamingo.Properties.Resources.Noggin1;
+            this.Noggin.Location = new System.Drawing.Point(-1, 384);
+            this.Noggin.Name = "Noggin";
+            this.Noggin.Size = new System.Drawing.Size(158, 221);
+            this.Noggin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Noggin.TabIndex = 30;
+            this.Noggin.TabStop = false;
+            // 
             // CityPictureBox
             // 
             this.CityPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(167)))), ((int)(((byte)(137)))));
@@ -249,10 +275,10 @@
             this.CityTextBox.ForeColor = System.Drawing.Color.Gray;
             this.CityTextBox.Location = new System.Drawing.Point(16, 14);
             this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.PlaceHolderText = "город";
+            this.CityTextBox.PlaceHolderText = "Город...";
             this.CityTextBox.Size = new System.Drawing.Size(170, 33);
             this.CityTextBox.TabIndex = 29;
-            this.CityTextBox.Text = "город";
+            this.CityTextBox.Text = "Город...";
             // 
             // SearchTextBox
             // 
@@ -262,10 +288,10 @@
             this.SearchTextBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchTextBox.Location = new System.Drawing.Point(225, 14);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.PlaceHolderText = "поисковой запрос";
+            this.SearchTextBox.PlaceHolderText = "Введите то что вы ищете...";
             this.SearchTextBox.Size = new System.Drawing.Size(711, 33);
             this.SearchTextBox.TabIndex = 28;
-            this.SearchTextBox.Text = "поисковой запрос";
+            this.SearchTextBox.Text = "Введите то что вы ищете...";
             // 
             // SearchForm
             // 
@@ -274,6 +300,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.Controls.Add(this.Noggin);
             this.Controls.Add(this.CityTextBox);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.CityPictureBox);
@@ -296,6 +323,7 @@
             this.SideBar.ResumeLayout(false);
             this.SideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SendToEmailButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Noggin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CityPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpandButton)).EndInit();
@@ -326,5 +354,8 @@
         private System.Windows.Forms.DateTimePicker StartDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox SendToEmailButton;
+        private System.Windows.Forms.PictureBox Noggin;
+        private System.Windows.Forms.Timer MoveNogginLeftTimer;
+        private System.Windows.Forms.Timer timer2;
     }
 }

@@ -45,6 +45,7 @@ C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\Flamingo.AuthorizationForm.reso
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\Flamingo.Properties.Resources.resources
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\Flamingo.ProjectResources.resources
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.GenerateResource.cache
+C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.CoreCompileInputs.cache
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.exe
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.pdb
@@ -53,3 +54,243 @@ C:\Users\Sergey\Desktop\ReFin\Flamingo\bin\Debug\System.Threading.Tasks.Extensio
 C:\Users\Sergey\Desktop\ReFin\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Sergey\Desktop\ReFin\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csprojAssemblyReference.cache
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\credentials.json
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\ReFin.exe.config
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\ReFin.exe
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\ReFin.pdb
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.pdb
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.pdb
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.pdb
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.csprojAssemblyReference.cache
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.Properties.PreloaderForm.resources
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.SearchForm.resources
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.RegistrationForm.resources
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.AuthorizationForm.resources
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.Properties.Resources.resources
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.ProjectResources.resources
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.csproj.GenerateResource.cache
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.exe
+C:\Users\SOLg\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\credentials.json
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\ReFin.exe.config
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\ReFin.exe
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\ReFin.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\ReFin.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\Flamingo.Properties.PreloaderForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\Flamingo.SearchForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\Flamingo.RegistrationForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\Flamingo.AuthorizationForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\Flamingo.Properties.Resources.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\Flamingo.ProjectResources.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\ReFin.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\ReFin.exe
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\obj\Debug\ReFin.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\credentials.json
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\ReFin.exe.config
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\ReFin.exe
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\ReFin.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Auth.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Calendar.v3.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Core.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Auth.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Calendar.v3.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Calendar.v3.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Core.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Google.Apis.Core.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\ReFin.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\Flamingo.Properties.PreloaderForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\Flamingo.SearchForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\Flamingo.RegistrationForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\Flamingo.AuthorizationForm.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\Flamingo.Properties.Resources.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\Flamingo.ProjectResources.resources
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\ReFin.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\ReFin.exe
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master — копия\Flamingo\obj\Debug\ReFin.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Autofac.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.AWT.WinForms.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Beans.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Charsets.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Corba.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Core.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Localedata.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Management.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Media.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Misc.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Naming.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Remoting.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Security.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Text.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Tools.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Util.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.API.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.Runtime.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\IKVM.Runtime.JNI.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Buffers.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Memory.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\WebDriver.dll
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Autofac.pdb
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Autofac.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Buffers.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Memory.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\User\Desktop\Учёба\ТРПО\ReFin-master\Flamingo\bin\Debug\WebDriver.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\credentials.json
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\ReFin.exe.config
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\ReFin.exe
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\ReFin.pdb
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Autofac.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.AWT.WinForms.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Beans.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Charsets.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Cldrdata.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Corba.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Core.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Jdbc.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Localedata.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Management.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Media.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Misc.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Naming.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Nashorn.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Remoting.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Security.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.SwingAWT.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Text.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Tools.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.Util.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.API.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Bind.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Crypto.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Parse.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.Transform.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.WebServices.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.OpenJDK.XML.XPath.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.Runtime.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\IKVM.Runtime.JNI.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Buffers.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Memory.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\WebDriver.dll
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Autofac.pdb
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Autofac.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.pdb
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Auth.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.pdb
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Calendar.v3.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.pdb
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Google.Apis.Core.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Buffers.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Memory.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\bin\Debug\WebDriver.xml
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.csprojAssemblyReference.cache
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.Properties.PreloaderForm.resources
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.SearchForm.resources
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.RegistrationForm.resources
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.AuthorizationForm.resources
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.Properties.Resources.resources
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\Flamingo.ProjectResources.resources
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.csproj.GenerateResource.cache
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.exe
+C:\Users\Sergey\Desktop\ReFin-master\Flamingo\obj\Debug\ReFin.pdb

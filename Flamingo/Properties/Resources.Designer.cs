@@ -93,6 +93,26 @@ namespace Flamingo.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Noggin {
+            get {
+                object obj = ResourceManager.GetObject("Noggin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Noggin1 {
+            get {
+                object obj = ResourceManager.GetObject("Noggin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SearchingField {
             get {
                 object obj = ResourceManager.GetObject("SearchingField", resourceCulture);

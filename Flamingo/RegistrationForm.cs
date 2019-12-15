@@ -1,6 +1,7 @@
 ﻿using Flamingo.Extension_Classes;
 using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Flamingo
@@ -148,7 +149,14 @@ namespace Flamingo
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            var soundPlayer = new SoundPlayer(@"sound3.wav");
+            soundPlayer.Play();
             Close();
+        }
+
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

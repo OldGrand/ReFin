@@ -10,6 +10,7 @@ using System.Net;
 using System.Runtime.InteropServices;
 using System.Linq;
 using System.Net.Mail;
+using System.Media;
 
 namespace Flamingo
 {
@@ -106,6 +107,8 @@ namespace Flamingo
 
             StartDate.ValueChanged += DateValueChanged;
             EndDate.ValueChanged += DateValueChanged;
+            Noggin.Left = 0 - Noggin.Width;
+            Noggin.Top = ClientSize.Height - Noggin.Height;
         }
 
         private void SearchResultsList_GotFocus(object sender, EventArgs e)
@@ -311,6 +314,7 @@ namespace Flamingo
             Wrap.Visible = true;
             SearchResultsList.Visible = true;
             SideBar.Visible = true;
+            MoveNogginLeftTimer.Enabled = true;
         }
 
         private async Task<string> GetStringResultAsync()
@@ -359,11 +363,6 @@ namespace Flamingo
             });
         }
 
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void CollapseButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -385,6 +384,8 @@ namespace Flamingo
             internetErrorPictureBox.Height = Wrap.Height;
             SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
             Wrap.VerticalScroll.Value = Wrap.VerticalScroll.Minimum;
+            Noggin.Top = ClientSize.Height - Noggin.Height;
+            Noggin.Left = 0 - Noggin.Width;
             if (preloader != null)
             {
                 preloader.Width = Wrap.Width;
@@ -399,7 +400,7 @@ namespace Flamingo
         private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
+            {       
                 StartSearch();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
@@ -441,6 +442,8 @@ namespace Flamingo
 
         private async void SendToEmailButton_Click(object sender, EventArgs e)
         {
+            var soundPlayer = new SoundPlayer(@"sound3.wav");
+            soundPlayer.Play();
             await Task.Run(() =>
             {
                 var smtp = new SmtpClient
@@ -452,36 +455,65 @@ namespace Flamingo
                     UseDefaultCredentials = false,
                     Credentials = new NetworkCredential("refininc@gmail.com", pswrd)
                 };
-                using (var message = new MailMessage("refininc@gmail.com", userMail){ Subject = "ReFin"} )
+                try
                 {
-                    string msg = "";
-                    if (EventsRadioButton.Checked && eventsRootObject.results.Count != 0)
+                    using (var message = new MailMessage("refininc@gmail.com", userMail){ Subject = "ReFin"} )
                     {
-                        foreach (var item in eventsRootObject.results)
-                            msg += $"{item.title}\nRating {item.rank}\n\n";
+                        string msg = "";
+                        if (EventsRadioButton.Checked && eventsRootObject.results.Count != 0)
+                        {
+                            foreach (var item in eventsRootObject.results)
+                                msg += $"{item.title}\nRating {item.rank}\n\n";
+                        }
+                        else if (OrganizationsRadioButton.Checked && rootObject.features.Count != 0)
+                        {
+                            foreach (var item in rootObject.features)
+                                msg += $"{item.properties.CompanyMetaData.Categories[1].name} {item.properties.name}\nRating {random.Next(56,101)}\n\n";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Не выполнен поисковой запрос");
+                            return;
+                        }
+                        message.Body = msg;
+
+                            smtp.Send(message);
+                            MessageBox.Show("Сообщение успешно отправлено");
+                        }
                     }
-                    else if (OrganizationsRadioButton.Checked && rootObject.features.Count != 0)
-                    {
-                        foreach (var item in rootObject.features)
-                            msg += $"{item.properties.CompanyMetaData.Categories[1].name} {item.properties.name}\nRating {random.Next(56,101)}\n\n";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Не выполнен поисковой запрос");
-                        return;
-                    }
-                    message.Body = msg;
-                    try
-                    {
-                        smtp.Send(message);
-                        MessageBox.Show("Сообщение успешно отправлено");
-                    }
-                    catch
-                    {
-                        MessageBox.Show("При регистрации указана не существующая почта");
-                    };
-                }
+                catch
+                {
+                    MessageBox.Show("При регистрации указана не существующая почта");
+                };
             });
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {  
+            Noggin.Left = Noggin.Left + 7;
+            if (Noggin.Left >= Noggin.Width)
+            {
+                var soundPlayer = new SoundPlayer(@"sound3.wav");
+                soundPlayer.Play();
+                Noggin.Image = Image.FromFile("Noggin.png");
+                (sender as System.Windows.Forms.Timer).Enabled = false;
+                timer2.Enabled = true;
+            }       
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            Noggin.Left = Noggin.Left - 7;
+            if (Noggin.Left <= 0 - Noggin.Width)
+            {
+                Noggin.Image = Image.FromFile("Noggin1.png");
+                (sender as System.Windows.Forms.Timer).Enabled = false;
+            }
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

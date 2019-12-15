@@ -35,10 +35,10 @@
             this.CollapseButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.RegistrationButton = new System.Windows.Forms.PictureBox();
-            this.LoginTextBox = new Flamingo.Classes.PHTextBox();
-            this.PasswordTextBox = new Flamingo.Classes.PHTextBox();
-            this.ConfirmPasswordTextBox = new Flamingo.Classes.PHTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.ConfirmPasswordTextBox = new Flamingo.Classes.PHTextBox();
+            this.PasswordTextBox = new Flamingo.Classes.PHTextBox();
+            this.LoginTextBox = new Flamingo.Classes.PHTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CollapseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrationButton)).BeginInit();
@@ -86,9 +86,10 @@
             // 
             this.CollapseButton.BackColor = System.Drawing.Color.Transparent;
             this.CollapseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CollapseButton.Location = new System.Drawing.Point(693, 3);
+            this.CollapseButton.Location = new System.Drawing.Point(693, 2);
+            this.CollapseButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CollapseButton.Name = "CollapseButton";
-            this.CollapseButton.Size = new System.Drawing.Size(35, 35);
+            this.CollapseButton.Size = new System.Drawing.Size(35, 34);
             this.CollapseButton.TabIndex = 23;
             this.CollapseButton.TabStop = false;
             this.CollapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
@@ -97,9 +98,10 @@
             // 
             this.CloseButton.BackColor = System.Drawing.Color.Transparent;
             this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CloseButton.Location = new System.Drawing.Point(735, 3);
+            this.CloseButton.Location = new System.Drawing.Point(735, 2);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(35, 35);
+            this.CloseButton.Size = new System.Drawing.Size(35, 34);
             this.CloseButton.TabIndex = 22;
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
@@ -110,69 +112,75 @@
             this.RegistrationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrationButton.Enabled = false;
             this.RegistrationButton.Location = new System.Drawing.Point(124, 367);
+            this.RegistrationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegistrationButton.Name = "RegistrationButton";
             this.RegistrationButton.Size = new System.Drawing.Size(160, 37);
             this.RegistrationButton.TabIndex = 10;
             this.RegistrationButton.TabStop = false;
-            // 
-            // LoginTextBox
-            // 
-            this.LoginTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.LoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LoginTextBox.Font = new System.Drawing.Font("Rockwell", 14F);
-            this.LoginTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.LoginTextBox.Location = new System.Drawing.Point(105, 218);
-            this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.PlaceHolderText = "e-mail";
-            this.LoginTextBox.Size = new System.Drawing.Size(190, 28);
-            this.LoginTextBox.TabIndex = 27;
-            this.LoginTextBox.Text = "e-mail";
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Rockwell", 14F);
-            this.PasswordTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.PasswordTextBox.Location = new System.Drawing.Point(105, 268);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PlaceHolderText = "password";
-            this.PasswordTextBox.Size = new System.Drawing.Size(190, 28);
-            this.PasswordTextBox.TabIndex = 28;
-            this.PasswordTextBox.Text = "password";
-            // 
-            // ConfirmPasswordTextBox
-            // 
-            this.ConfirmPasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
-            this.ConfirmPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ConfirmPasswordTextBox.Font = new System.Drawing.Font("Rockwell", 14F);
-            this.ConfirmPasswordTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(105, 319);
-            this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
-            this.ConfirmPasswordTextBox.PlaceHolderText = "confirm password";
-            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(190, 28);
-            this.ConfirmPasswordTextBox.TabIndex = 29;
-            this.ConfirmPasswordTextBox.Text = "confirm password";
+            this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButton_Click);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("Script MT Bold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(581, 388);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 60);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Authorization";
+            this.button1.Text = "Sign in";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // ConfirmPasswordTextBox
+            // 
+            this.ConfirmPasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.ConfirmPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ConfirmPasswordTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(105, 319);
+            this.ConfirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
+            this.ConfirmPasswordTextBox.PlaceHolderText = "confirm password";
+            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(189, 20);
+            this.ConfirmPasswordTextBox.TabIndex = 29;
+            this.ConfirmPasswordTextBox.Text = "confirm password";
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PasswordTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.PasswordTextBox.Location = new System.Drawing.Point(105, 268);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PlaceHolderText = "password";
+            this.PasswordTextBox.Size = new System.Drawing.Size(189, 20);
+            this.PasswordTextBox.TabIndex = 28;
+            this.PasswordTextBox.Text = "password";
+            // 
+            // LoginTextBox
+            // 
+            this.LoginTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(229)))), ((int)(((byte)(221)))));
+            this.LoginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.LoginTextBox.Location = new System.Drawing.Point(105, 218);
+            this.LoginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.PlaceHolderText = "e-mail";
+            this.LoginTextBox.Size = new System.Drawing.Size(189, 20);
+            this.LoginTextBox.TabIndex = 27;
+            this.LoginTextBox.Text = "e-mail";
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(770, 460);
+            this.ClientSize = new System.Drawing.Size(771, 460);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ConfirmPasswordTextBox);
             this.Controls.Add(this.PasswordTextBox);
@@ -186,6 +194,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RegistrationForm";
             this.Text = "Authorization";
             ((System.ComponentModel.ISupportInitialize)(this.CollapseButton)).EndInit();
