@@ -21,6 +21,7 @@ namespace Flamingo
         private const string pswrd = "43896y352refhselgue";
         private string userMail;
         private bool isSearchActive;
+        private bool isNogginMoving;
         private const int cGrip = 16;     
         private const int cCaption = 32;
         private Thread inthernetChecker;
@@ -273,54 +274,57 @@ namespace Flamingo
 
         private async void StartSearch()
         {
-            SearchResultsList.Text = "";
-            SearchResultsList.Height = 0;
-            isSearchActive = true;
-            internetErrorPictureBox.Visible = false;
-            Wrap.Visible = false;
-            SearchResultsList.Visible = false;
-            SideBar.Visible = false;
-
-            if (EventsRadioButton.Checked)
+            if (!isSearchActive)
             {
-                await Task.Run(() =>
-                {
-                    eventsRootObject = StartPredictHQSearchAsync().Result;
-                });
-                await Task.Run(() =>
-                {
-                    SearchResultsList.Text = GetStringEventResultAsync().Result;
-                    using (Graphics graphics = Graphics.FromHwnd(this.Handle))
-                    {
-                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+400;
-                    }
-                });
-            }
-            else if (OrganizationsRadioButton.Checked)
-            {
-                await Task.Run(() =>
-                {
-                    rootObject = StartYandexSearchAsync().Result;
-                });
-                await Task.Run(() =>
-                {
-                    SearchResultsList.Text = GetStringResultAsync().Result;
-                    using (Graphics graphics = Graphics.FromHwnd(this.Handle))
-                    {
-                        SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height)+200;
-                    }
-                });
-            }
+                SearchResultsList.Text = "";
+                SearchResultsList.Height = 0;
+                isSearchActive = true;
+                internetErrorPictureBox.Visible = false;
+                Wrap.Visible = false;
+                SearchResultsList.Visible = false;
+                SideBar.Visible = false;
 
-            SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
-            SearchResultsList.SelectionStart = 0;
-            isSearchActive = false;
-            internetErrorPictureBox.Visible = true;
-            Wrap.Visible = true;
-            SearchResultsList.Visible = true;
-            SideBar.Visible = true;
-            if (!NogginSwitcherCheckBox.Checked)
-                MoveNogginLeftTimer.Enabled = true;
+                if (EventsRadioButton.Checked)
+                {
+                    await Task.Run(() =>
+                    {
+                        eventsRootObject = StartPredictHQSearchAsync().Result;
+                    });
+                    await Task.Run(() =>
+                    {
+                        SearchResultsList.Text = GetStringEventResultAsync().Result;
+                        using (Graphics graphics = Graphics.FromHwnd(this.Handle))
+                        {
+                            SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height) + 400;
+                        }
+                    });
+                }
+                else if (OrganizationsRadioButton.Checked)
+                {
+                    await Task.Run(() =>
+                    {
+                        rootObject = StartYandexSearchAsync().Result;
+                    });
+                    await Task.Run(() =>
+                    {
+                        SearchResultsList.Text = GetStringResultAsync().Result;
+                        using (Graphics graphics = Graphics.FromHwnd(this.Handle))
+                        {
+                            SearchResultsList.Height = (int)Math.Round(graphics.MeasureString(SearchResultsList.Text, SearchResultsList.Font).Height) + 200;
+                        }
+                    });
+                }
+
+                SearchResultsList.Left = Wrap.Width / 2 - SearchResultsList.Width / 2;
+                SearchResultsList.SelectionStart = 0;
+                isSearchActive = false;
+                internetErrorPictureBox.Visible = true;
+                Wrap.Visible = true;
+                SearchResultsList.Visible = true;
+                SideBar.Visible = true;
+                if (!NogginSwitcherCheckBox.Checked)
+                    MoveNogginLeftTimer.Enabled = true;
+            }
         }
 
         private async Task<string> GetStringResultAsync()
@@ -502,16 +506,20 @@ namespace Flamingo
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        {  
-            Noggin.Left = Noggin.Left + 7;
-            if (Noggin.Left >= Noggin.Width)
+        {
+            if (!isNogginMoving)
             {
-                var soundPlayer = new SoundPlayer(@"sound3.wav");
-                soundPlayer.Play();
-                Noggin.Image = Image.FromFile("Noggin.png");
-                (sender as System.Windows.Forms.Timer).Enabled = false;
-                timer2.Enabled = true;
-            }       
+                Noggin.Left = Noggin.Left + 7;
+                if (Noggin.Left >= Noggin.Width)
+                {
+                    isNogginMoving = true;
+                    var soundPlayer = new SoundPlayer(@"sound3.wav");
+                    soundPlayer.Play();
+                    Noggin.Image = Image.FromFile("Noggin.png");
+                    (sender as System.Windows.Forms.Timer).Enabled = false;
+                    timer2.Enabled = true;
+                }
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -521,6 +529,7 @@ namespace Flamingo
             {
                 Noggin.Image = Image.FromFile("Noggin1.png");
                 (sender as System.Windows.Forms.Timer).Enabled = false;
+                isNogginMoving = false;
             }
         }
 

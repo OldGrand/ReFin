@@ -338,3 +338,4 @@ C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.GenerateResource.c
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csproj.CopyComplete
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.exe
 C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.pdb
+C:\Users\Sergey\Desktop\ReFin\Flamingo\obj\Debug\ReFin.csprojAssemblyReference.cache

@@ -16,7 +16,7 @@ namespace Flamingo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthorizationForm());
+            Application.Run(new SearchForm("Sergey.sipov.150699@gmail.com"));
         }
     }
 }
