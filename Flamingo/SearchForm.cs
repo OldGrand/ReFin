@@ -67,6 +67,7 @@ namespace Flamingo
             SearchTextBox.KeyDown += SearchTextBox_KeyDown;
 
             CityTextBox.KeyDown += CityTextBox_KeyDown;
+            CityTextBox.KeyPress += KeyPressHandler;
 
             Wrap.Left = 0;
             Wrap.Top = toolStrip1.Top + toolStrip1.Height;
@@ -109,6 +110,12 @@ namespace Flamingo
             EndDate.ValueChanged += DateValueChanged;
             Noggin.Left = 0 - Noggin.Width;
             Noggin.Top = ClientSize.Height - Noggin.Height;
+        }
+
+        public void KeyPressHandler(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || Char.IsSeparator(e.KeyChar) || Char.IsPunctuation(e.KeyChar))
+                e.Handled = true;
         }
 
         private void SearchResultsList_GotFocus(object sender, EventArgs e)
@@ -476,14 +483,18 @@ namespace Flamingo
                             foreach (var item in rootObject.features)
                                 msg += $"{item.properties.CompanyMetaData.Categories[0].name} {item.properties.name}\nRating {random.Next(56, 101)}\n\n";
                         }
-                        message.Body = msg;
-
-                        smtp.Send(message);
-                        MessageBox.Show("Сообщение успешно отправлено", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (msg != "")
+                        {
+                            message.Body = msg;
+                            smtp.Send(message);
+                            MessageBox.Show("Сообщение успешно отправлено", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                            MessageBox.Show("Сначала выполните поисковой запрос", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     catch
                     {
-                        MessageBox.Show("Не выполнен поисковой запрос", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Сначала выполните поисковой запрос", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
                     }
                 }

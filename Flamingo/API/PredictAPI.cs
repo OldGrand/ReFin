@@ -14,7 +14,6 @@ namespace Flamingo.API
         private string _startDate;
         private string _endDate;
         private string _city;
-        private string _advancedSearchOptions;
         private string _fileName;
 
         public PredictAPI(string @event, string city, string startDate, string endDate, string fileNameWithoutExtension)
@@ -25,7 +24,6 @@ namespace Flamingo.API
             _event = yandexTranslator.Translate(@event);
             _city = city;
             _fileName = $"{fileNameWithoutExtension}.json";
-            _advancedSearchOptions = "";
         }
 
         public void StartSearch()
@@ -45,7 +43,6 @@ namespace Flamingo.API
             #endregion
             try
             {
-                System.Windows.Forms.MessageBox.Show(String.Join("_", _city.Split(new[] { '.', ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)));
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://api.predicthq.com/v1/events/?q=" + $"{_event}&country=US&active.gte={_startDate}&active.lte={_endDate}&active.tz=America/{String.Join("_", _city.Split(new[] { '.', ' ', ',' }, StringSplitOptions.RemoveEmptyEntries))}&sort=rank");
                 req.Headers.Add("Authorization: Bearer 3kZgSkhejEg4zgqYVw8xObQQOVi-XvmZLvYbn08N");
                 req.Accept = "application/json";

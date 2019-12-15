@@ -349,7 +349,6 @@
     <Compile Include="SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\User.cs" />
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
