@@ -51,6 +51,7 @@
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.CityTextBox = new Flamingo.Classes.PHTextBox();
             this.SearchTextBox = new Flamingo.Classes.PHTextBox();
+            this.NogginSwitcherCheckBox = new System.Windows.Forms.CheckBox();
             this.Wrap.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SendToEmailButton)).BeginInit();
@@ -78,6 +79,7 @@
             this.SideBar.BackColor = System.Drawing.Color.Transparent;
             this.SideBar.BackgroundImage = global::Flamingo.ProjectResources.SideBarBG;
             this.SideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SideBar.Controls.Add(this.NogginSwitcherCheckBox);
             this.SideBar.Controls.Add(this.SendToEmailButton);
             this.SideBar.Controls.Add(this.label1);
             this.SideBar.Controls.Add(this.label2);
@@ -87,14 +89,14 @@
             this.SideBar.Controls.Add(this.EventsRadioButton);
             this.SideBar.Location = new System.Drawing.Point(21, 20);
             this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(175, 241);
+            this.SideBar.Size = new System.Drawing.Size(178, 278);
             this.SideBar.TabIndex = 4;
             // 
             // SendToEmailButton
             // 
             this.SendToEmailButton.BackgroundImage = global::Flamingo.ProjectResources.SendToEmailButton;
             this.SendToEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SendToEmailButton.Location = new System.Drawing.Point(14, 184);
+            this.SendToEmailButton.Location = new System.Drawing.Point(14, 221);
             this.SendToEmailButton.Name = "SendToEmailButton";
             this.SendToEmailButton.Size = new System.Drawing.Size(144, 42);
             this.SendToEmailButton.TabIndex = 8;
@@ -200,7 +202,7 @@
             // 
             this.Noggin.BackColor = System.Drawing.Color.Transparent;
             this.Noggin.Image = global::Flamingo.Properties.Resources.Noggin1;
-            this.Noggin.Location = new System.Drawing.Point(-1, 384);
+            this.Noggin.Location = new System.Drawing.Point(0, 289);
             this.Noggin.Name = "Noggin";
             this.Noggin.Size = new System.Drawing.Size(158, 221);
             this.Noggin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,6 +295,17 @@
             this.SearchTextBox.TabIndex = 28;
             this.SearchTextBox.Text = "Введите то что вы ищете...";
             // 
+            // NogginSwitcherCheckBox
+            // 
+            this.NogginSwitcherCheckBox.AutoSize = true;
+            this.NogginSwitcherCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NogginSwitcherCheckBox.Location = new System.Drawing.Point(7, 184);
+            this.NogginSwitcherCheckBox.Name = "NogginSwitcherCheckBox";
+            this.NogginSwitcherCheckBox.Size = new System.Drawing.Size(160, 21);
+            this.NogginSwitcherCheckBox.TabIndex = 32;
+            this.NogginSwitcherCheckBox.Text = "Отключить гнома";
+            this.NogginSwitcherCheckBox.UseVisualStyleBackColor = true;
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -357,5 +370,6 @@
         private System.Windows.Forms.PictureBox Noggin;
         private System.Windows.Forms.Timer MoveNogginLeftTimer;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.CheckBox NogginSwitcherCheckBox;
     }
 }

@@ -312,7 +312,8 @@ namespace Flamingo
             Wrap.Visible = true;
             SearchResultsList.Visible = true;
             SideBar.Visible = true;
-            MoveNogginLeftTimer.Enabled = true;
+            if (!NogginSwitcherCheckBox.Checked)
+                MoveNogginLeftTimer.Enabled = true;
         }
 
         private async Task<string> GetStringResultAsync()
